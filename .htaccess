@@ -1,0 +1,47 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/akoodedemo/wegrowapi.akoodedemo.com"
+PassengerBaseURI "/"
+PassengerNodejs "/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/bin/node"
+PassengerAppType node
+PassengerStartupFile index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv MONGODB_URL mongodb+srv://anyuser:pKCpFoDde60NqqJW@antminute.s0xyn.mongodb.net/wegrow?retryWrites=true&w=majority&appName=antminute
+SetEnv PORT 5000
+SetEnv API_KEY 167489568514698
+SetEnv CLOUD_NAME dkzgf3b1w
+SetEnv JWT_SECRET wegrowjwt
+SetEnv SECRET_KEY CZIE_DKNICderEujRUYkJsJ1nno
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php8_module>
+   php_flag display_errors Off
+   php_value max_execution_time 300
+   php_value max_input_time 600
+   php_value max_input_vars 1000
+   php_value memory_limit 1024M
+   php_value post_max_size 1024M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php81"
+   php_value upload_max_filesize 1024M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 300
+   php_value max_input_time 600
+   php_value max_input_vars 1000
+   php_value memory_limit 1024M
+   php_value post_max_size 1024M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php81"
+   php_value upload_max_filesize 1024M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
