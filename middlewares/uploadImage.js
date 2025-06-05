@@ -72,7 +72,7 @@ const productImgResize = async (req, res, next) => {
   await Promise.all(
     req.files.map(async (file) => {
       await sharp(file.path)
-        .resize(300, 300)
+        .resize(750, 450)
         .toFormat("jpeg")
         .jpeg({ quality: 90 })
         .toFile(`public/images/products/${file.filename}`);
@@ -120,7 +120,7 @@ const builderImgResize = async (req) => {
       const outputPath = path.join("public", "images", "builder", filename);
 
       await sharp(file.path)
-        .resize(300, 300)
+        .resize(750, 450)
         .toFormat("jpeg")
         .jpeg({ quality: 90 })
         .toFile(outputPath);
@@ -198,7 +198,7 @@ const testimonialImgResize = async (req) => {
       const outputPath = path.join("public", "images", "testimonial", filename);
 
       await sharp(file.path)
-        .resize(300, 300)
+        .resize(750, 450)
         .toFormat("jpeg")
         .jpeg({ quality: 90 })
         .toFile(outputPath);
@@ -225,7 +225,7 @@ const propertySelectedImgsResize = async (req) => {
       const outputPath = path.join("public", "images", "propertyimage", filename);
 
       await sharp(file.path)
-        .resize(300, 300)
+        .resize(750, 450)
         .toFormat("jpeg")
         .jpeg({ quality: 90 })
         .toFile(outputPath);
@@ -488,7 +488,7 @@ const gallerySelectedImgsResize = async (req) => {
       const outputPath = path.join("public", "images", "landing", filename);
 
       await sharp(file.path)
-        .resize(300, 300)
+        .resize(750, 450)
         .toFormat("jpeg")
         .jpeg({ quality: 90 })
         .toFile(outputPath);
