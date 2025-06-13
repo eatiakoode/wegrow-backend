@@ -136,7 +136,6 @@ app.use("/frontend/api/category", categoryFrontendRoute);
 app.use("/frontend/api/builder", builderFrontendRoute);
 
 
-
 const path = require("path");
 // app.use("/public", express.static(path.join(__dirname, "public")));
 // app.use(express.static("public"));
