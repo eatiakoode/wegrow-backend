@@ -1,0 +1,2096 @@
+/home/akoodewegrow/wegrow/node_modules/mongodb/lib/operations/add_user.js:16
+        this.options = options ?? {};
+                                ^
+
+SyntaxError: Unexpected token ?
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/node_modules/mongodb/lib/admin.js:4:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+/home/akoodewegrow/wegrow/node_modules/mongodb/lib/operations/add_user.js:16
+        this.options = options ?? {};
+                                ^
+
+SyntaxError: Unexpected token ?
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/node_modules/mongodb/lib/admin.js:4:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+/home/akoodewegrow/wegrow/node_modules/mongodb/lib/operations/add_user.js:16
+        this.options = options ?? {};
+                                ^
+
+SyntaxError: Unexpected token ?
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/node_modules/mongodb/lib/admin.js:4:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+/home/akoodewegrow/wegrow/node_modules/mongodb/lib/operations/add_user.js:16
+        this.options = options ?? {};
+                                ^
+
+SyntaxError: Unexpected token ?
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/node_modules/mongodb/lib/admin.js:4:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+/home/akoodewegrow/wegrow/node_modules/mongodb/lib/operations/add_user.js:16
+        this.options = options ?? {};
+                                ^
+
+SyntaxError: Unexpected token ?
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/node_modules/mongodb/lib/admin.js:4:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'body-parser'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/index.js:1:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'body-parser'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/index.js:1:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '../utils/validateMongodbId'
+Require stack:
+- /home/akoodewegrow/wegrow/controller/userCtrl.js
+- /home/akoodewegrow/wegrow/routes/authRoute.js
+- /home/akoodewegrow/wegrow/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodewegrow/wegrow/controller/userCtrl.js:10:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodewegrow/wegrow/controller/userCtrl.js',
+    '/home/akoodewegrow/wegrow/routes/authRoute.js',
+    '/home/akoodewegrow/wegrow/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: retry: Resource temporarily unavailable
+/home/akoodewegrow/nodevenv/wegrow/22/bin/node: fork: Resource temporarily unavailable
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module 'body-parser'
+Require stack:
+- /home/akoodedemo/wegrowapi.akoodedemo.com/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodedemo/wegrowapi.akoodedemo.com/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /home/akoodedemo/wegrowapi.akoodedemo.com/index.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:2:17)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/akoodedemo/wegrowapi.akoodedemo.com/index.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+
+Node.js v22.14.0
+/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/body-parser/index.js:14
+var deprecate = require('depd')('body-parser')
+                               ^
+
+TypeError: require(...) is not a function
+    at Object.<anonymous> (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/body-parser/index.js:14:32)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Module._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.require (node:internal/modules/cjs/loader:1311:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:1:20)
+
+Node.js v22.14.0
+/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206
+    throw new MongooseError('The `uri` parameter to `openUri()` must be a ' +
+          ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/connection.js:766:34)
+    at Mongoose.connect (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/index.js:416:15)
+    at dbConnect (/home/akoodedemo/wegrowapi.akoodedemo.com/config/dbConnect.js:5:27)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:48:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Module._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+
+Node.js v22.14.0
+/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206
+    throw new MongooseError('The `uri` parameter to `openUri()` must be a ' +
+          ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/connection.js:766:34)
+    at Mongoose.connect (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/index.js:416:15)
+    at dbConnect (/home/akoodedemo/wegrowapi.akoodedemo.com/config/dbConnect.js:5:27)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:48:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Module._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+
+Node.js v22.14.0
+/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206
+    throw new MongooseError('The `uri` parameter to `openUri()` must be a ' +
+          ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/connection.js:766:34)
+    at Mongoose.connect (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/index.js:416:15)
+    at dbConnect (/home/akoodedemo/wegrowapi.akoodedemo.com/config/dbConnect.js:5:27)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:48:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Module._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+
+Node.js v22.14.0
+/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206
+    throw new MongooseError('The `uri` parameter to `openUri()` must be a ' +
+          ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/connection.js:766:34)
+    at Mongoose.connect (/home/akoodedemo/nodevenv/wegrowapi.akoodedemo.com/22/lib/node_modules/mongoose/lib/index.js:416:15)
+    at dbConnect (/home/akoodedemo/wegrowapi.akoodedemo.com/config/dbConnect.js:5:27)
+    at Object.<anonymous> (/home/akoodedemo/wegrowapi.akoodedemo.com/index.js:48:1)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Module._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+
+Node.js v22.14.0
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
