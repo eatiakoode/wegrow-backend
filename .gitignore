@@ -6,3 +6,4 @@ test_mail.js
 create_token.js
 php.ini
 stderr.log
+/node_modules
