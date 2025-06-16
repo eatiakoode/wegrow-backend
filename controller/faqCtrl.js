@@ -68,8 +68,34 @@ const getFaq = asyncHandler(async (req, res) => {
 });
 const getallFaq = asyncHandler(async (req, res) => {
   try {
-    const getallFaq = await Faq.find();
-    res.json(getallFaq);
+    // const getallFaq = await Faq.find();
+    // res.json(getallFaq);
+    let limit=100;
+        let skip=1;
+        
+    
+        if (req.query.limit ) {
+          limit=req.query.limit;
+          skip=req.query.skip;     
+      }
+       
+        const [propertyList, totalCount] = await Promise.all([
+                  Faq.find()
+                    .sort({ _id: -1})
+                    .skip((skip - 1) * limit)
+                    .limit(limit)
+                    .lean(),
+                
+                  Faq.countDocuments() // total matching without skip/limit
+                ]);
+                // propertyList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+                // console.log(propertyList)
+                res.status(200).json({
+                  items: propertyList,
+                  totalCount: totalCount,
+                  currentPage: skip,
+                  totalPages: Math.ceil(totalCount / limit)
+                });
   } catch (error) {
     throw new Error(error);
   }

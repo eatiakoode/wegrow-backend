@@ -62,8 +62,35 @@ const getPropertytype = asyncHandler(async (req, res) => {
 });
 const getallPropertytype = asyncHandler(async (req, res) => {
   try {
-    const getallPropertytype = await Propertytype.find().populate("categoryid");
-    res.json(getallPropertytype);
+    let limit=100;
+    let skip=1;
+    
+
+    if (req.query.limit ) {
+      limit=req.query.limit;
+      skip=req.query.skip;     
+  }
+    // const getallPropertytype = await Propertytype.find().populate("categoryid");
+    // res.json(getallPropertytype);
+    const [propertyList, totalCount] = await Promise.all([
+              Propertytype.find()
+                // .populate("cityid")
+                .populate("categoryid")
+                .sort({ _id: -1})
+                .skip((skip - 1) * limit)
+                .limit(limit)
+                .lean(),
+            
+              Propertytype.countDocuments() // total matching without skip/limit
+            ]);
+            // propertyList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+            // console.log(propertyList)
+            res.status(200).json({
+              items: propertyList,
+              totalCount: totalCount,
+              currentPage: skip,
+              totalPages: Math.ceil(totalCount / limit)
+            });
   } catch (error) {
     throw new Error(error);
   }
