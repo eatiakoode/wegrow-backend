@@ -230,7 +230,7 @@ const propertySelectedImgsResize = async (req) => {
         .jpeg({ quality: 90 })
         .toFile(outputPath);
 
-      fs.unlinkSync(file.path); // delete original uploaded file
+      // fs.unlinkSync(file.path); // delete original uploaded file
 
       processedFilenames.push("public/images/propertyimage/"+filename);
     })
