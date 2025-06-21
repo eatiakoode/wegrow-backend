@@ -11,7 +11,7 @@ const createProperty = asyncHandler(async (req, res) => {
     console.log("pdfshow")
     console.log(req.files)
     if (req.files && Object.keys(req.files).length > 0) {
-      var propertySelectedImgs  =[]
+      var  propertySelectedImgs  =[]
       if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
         console.log("no propertySelectedImgs")
          propertySelectedImgs  = await propertySelectedImgsResize(req);
@@ -19,7 +19,6 @@ const createProperty = asyncHandler(async (req, res) => {
           // ✅ Append logo filename to req.body
           // console.log("Property Images:", propertySelectedImgs);
           req.body.propertyimageurl = propertySelectedImgs;
-          
         }
       }
      
@@ -77,7 +76,7 @@ const createProperty = asyncHandler(async (req, res) => {
           "propertyid":newProperty._id,
           "title":newProperty.title
         }
-        const newProperty = await Propertyimage.create(propertyimage);
+        const newPropertyw = await Propertyimage.create(propertyimage);
 
       }
     }
