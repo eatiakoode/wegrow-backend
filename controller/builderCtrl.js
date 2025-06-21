@@ -92,8 +92,32 @@ const getBuilder = asyncHandler(async (req, res) => {
 });
 const getallBuilder = asyncHandler(async (req, res) => {
   try {
-    const getallBuilder = await Builder.find();
-    res.json(getallBuilder);
+    let limit=100;
+                    let skip=1;
+                    
+                
+                    if (req.query.limit ) {
+                      limit=req.query.limit;
+                      skip=req.query.skip;     
+                  }
+                   
+                    const [BuilderList, totalCount] = await Promise.all([
+                              Builder.find()
+                                .sort({ _id: -1})
+                                .skip((skip - 1) * limit)
+                                .limit(limit)
+                                .lean(),
+                            
+                              Builder.countDocuments() // total matching without skip/limit
+                            ]);
+                            res.status(200).json({
+                          items: BuilderList,
+                          totalCount: totalCount,
+                          currentPage: skip,
+                          totalPages: Math.ceil(totalCount / limit)
+                        });
+    // const getallBuilder = await Builder.find();
+    // res.json(getallBuilder);
   } catch (error) {
     throw new Error(error);
   }
