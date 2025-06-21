@@ -74,8 +74,32 @@ const getAmenity = asyncHandler(async (req, res) => {
 });
 const getallAmenity = asyncHandler(async (req, res) => {
   try {
-    const getallAmenity = await Amenity.find();
-    res.json(getallAmenity);
+     let limit=100;
+            let skip=1;
+            
+        
+            if (req.query.limit ) {
+              limit=req.query.limit;
+              skip=req.query.skip;     
+          }
+           
+            const [amenityList, totalCount] = await Promise.all([
+                      Amenity.find()
+                        .sort({ _id: -1})
+                        .skip((skip - 1) * limit)
+                        .limit(limit)
+                        .lean(),
+                    
+                      Amenity.countDocuments() // total matching without skip/limit
+                    ]);
+                    res.status(200).json({
+                  items: amenityList,
+                  totalCount: totalCount,
+                  currentPage: skip,
+                  totalPages: Math.ceil(totalCount / limit)
+                });
+    // const getallAmenity = await Amenity.find();
+    // res.json(getallAmenity);
   } catch (error) {
     throw new Error(error);
   }
