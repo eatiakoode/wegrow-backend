@@ -7,3 +7,5 @@ create_token.js
 php.ini
 stderr.log
 /node_modules
+wegrow-backend
+/wegrow-backend
