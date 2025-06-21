@@ -62,8 +62,32 @@ const getLocation = asyncHandler(async (req, res) => {
 });
 const getallLocation = asyncHandler(async (req, res) => {
   try {
-    const getallLocation = await Location.find().populate("cityid");
-    res.json(getallLocation);
+    let limit=100;
+                let skip=1;
+                
+            
+                if (req.query.limit ) {
+                  limit=req.query.limit;
+                  skip=req.query.skip;     
+              }
+               
+                const [LocationList, totalCount] = await Promise.all([
+                          Location.find()
+                            .sort({ _id: -1})
+                            .skip((skip - 1) * limit)
+                            .limit(limit)
+                            .lean(),
+                        
+                          Location.countDocuments() // total matching without skip/limit
+                        ]);
+                        res.status(200).json({
+                      items: LocationList,
+                      totalCount: totalCount,
+                      currentPage: skip,
+                      totalPages: Math.ceil(totalCount / limit)
+                    });
+    // const getallLocation = await Location.find().populate("cityid");
+    // res.json(getallLocation);
   } catch (error) {
     throw new Error(error);
   }
