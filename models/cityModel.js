@@ -21,6 +21,12 @@ var citySchema = new mongoose.Schema(
       ref: "Country", 
       required: true,
     },
+    description:{
+      type: String,
+      required: true,
+      unique: true,
+      index: true,
+    },
     stateid: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "State", 
@@ -35,6 +41,13 @@ var citySchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+citySchema.virtual('cityglimpse', {
+  ref: 'Cityglimpse', // Make sure this matches the model name for your images schema
+  localField: '_id',
+  foreignField: 'cityid',
+});
 
+citySchema.set('toObject', { virtuals: true });
+citySchema.set('toJSON', { virtuals: true });
 //Export the model
 module.exports = mongoose.model("City", citySchema);

@@ -158,11 +158,28 @@ const getCityWithPropertypage = asyncHandler(async (req, res) => {
   }
 
 });
+const getByidGlimpse = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  validateMongoDbId(id);
+  try {
+    const getaCity = await City.findById(id).populate("cityglimpse");
+    const message={
+      "status":"success",
+      "message":"Data city sucessfully",
+      "data":getaCity
+    }
+    res.json(message);
+   //res.json(getaCity);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
 module.exports = {
   getCity,
   getallCity,
   getCityStateId,
   countPropertiesByCity,
   getCityWithLocation,
-  getCityWithPropertypage
+  getCityWithPropertypage,
+  getByidGlimpse
 };

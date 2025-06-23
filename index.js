@@ -44,6 +44,8 @@ const landingPaymentRouter = require("./routes/landingPaymentRouter");
 const enqRouter = require("./routes/enqRoute");
 const enqPropertyRouter = require("./routes/enqPropertyRoute");
 const enqLandingRouter = require("./routes/enqLandingRoute");
+const cityGlimpseRouter = require("./routes/cityGlimpseRouter");
+
 
 
 // Frontend API route
@@ -118,6 +120,7 @@ app.use("/admin/api/landingpayment", landingPaymentRouter);
 app.use("/admin/api/enquiry", enqRouter);
 app.use("/admin/api/propertyenquiry", enqPropertyRouter);
 app.use("/admin/api/landingenquiry", enqLandingRouter);
+app.use("/admin/api/cityglimpse", cityGlimpseRouter);
 
 
 // Frontend API
@@ -134,6 +137,7 @@ app.use("/frontend/api/landingpage", landingpageFrontendRoute);
 app.use("/frontend/api/landingenquiry", enqLandingFrontendRouter);
 app.use("/frontend/api/category", categoryFrontendRoute);
 app.use("/frontend/api/builder", builderFrontendRoute);
+
 
 
 const path = require("path");

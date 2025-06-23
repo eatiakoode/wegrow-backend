@@ -79,7 +79,7 @@ const getCity = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
-    const getaCity = await City.findById(id);
+    const getaCity = await City.findById(id).populate("cityglimpse");
     const message={
       "status":"success",
       "message":"Data city sucessfully",

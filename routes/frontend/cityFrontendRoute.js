@@ -5,7 +5,8 @@ const {
   getCityStateId,
   countPropertiesByCity,
   getCityWithLocation,
-  getCityWithPropertypage
+  getCityWithPropertypage,
+  getByidGlimpse
 } = require("../../controller/frontend/cityCtrl");
 const router = express.Router();
 
@@ -16,6 +17,7 @@ router.get("/bystate/:stateid", getCityStateId);
 router.get("/listwithpropertcount", countPropertiesByCity);
 router.get("/citywithlocation", getCityWithLocation);
 router.get("/citywithpropertypage", getCityWithPropertypage);
+router.get("/byidglimpse/:id", getByidGlimpse);
 
 
 
