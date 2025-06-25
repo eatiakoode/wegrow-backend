@@ -1,3 +1,4 @@
+const multer = require("multer");
 // not Found
 
 const notFound = (req, res, next) => {
@@ -9,6 +10,17 @@ const notFound = (req, res, next) => {
 // Error Handler
 
 const errorHandler = (err, req, res, next) => {
+ if (err instanceof multer.MulterError && err.code === "LIMIT_FILE_SIZE") {
+    const fieldName = err.field || "unknown";
+    return res.status(400).json({
+      message: `File too large in field '${fieldName}'. Max size is 2MB.`,
+    });
+  }
+
+  // Other Multer errors
+  if (err instanceof multer.MulterError) {
+    return res.status(400).json({ message: err.message });
+  }
   const statuscode = res.statusCode == 200 ? 500 : res.statusCode;
   res.status(statuscode);
   res.json({

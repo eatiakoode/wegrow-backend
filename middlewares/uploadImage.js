@@ -50,11 +50,17 @@ const uploadPhoto = multer({
   limits: { fileSize: 5 * 1024 * 1024 } // 5MB
 
 });
+const dynamicFields = Array.from({ length: 20 }, (_, i) => ({
+  name: `floorPlans[${i}][planimage]`, maxCount: 1
+}));
 const photoUploadMiddleware = uploadPhoto.fields([
   { name: 'featuredimage', maxCount: 1 },
   { name: 'siteplan', maxCount: 1 },
   { name: 'pdffile', maxCount: 1 },
   { name: 'propertySelectedImgs', maxCount: 10 },
+  // ...dynamicFields
+  
+
   // { name: 'planimage', maxCount: 80 }
   // { name: 'citylogo', maxCount: 1 },
   
@@ -266,7 +272,39 @@ const cityImgResize = async (req) => {
 
   return processedFilenames;
 };
+const processFloorPlanImagesAdd = async (req) => {
+  const processedFilenames = [];
 
+  if (!req.floorPlansnew) return [];
+
+  const file = req.floorPlansnew;
+
+  // Remove original extension before adding .jpeg
+  const originalNameWithoutExt = path.basename(file.originalname, path.extname(file.originalname));
+  const filename = `floorplan-${Date.now()}-${originalNameWithoutExt}.jpeg`;
+  const outputPath = path.join("public", "images", "propertyplan", filename);
+
+  try {
+    await sharp(file.path)
+      .resize(750, 450)
+      .toFormat("jpeg")
+      .jpeg({ quality: 90 })
+      .toFile(outputPath);
+
+    fs.unlinkSync(file.path); // clean up original
+
+    processedFilenames.push({
+      index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]),
+      filename,
+      url: `public/images/propertyplan/${filename}`,
+    });
+  } catch (err) {
+    console.error("Error processing floor plan image:", err.message);
+    fs.unlinkSync(file.path);
+  }
+
+  return processedFilenames;
+};
 
 const processFloorPlanImages = async (req) => {
   const processedFilenames = [];
@@ -548,4 +586,4 @@ const processUploadedPDFs = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs};
+module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd};

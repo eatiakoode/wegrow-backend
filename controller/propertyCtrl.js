@@ -1,10 +1,11 @@
 const Property = require("../models/propertyModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId");
-const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs } = require("../middlewares/uploadImage");
+const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd } = require("../middlewares/uploadImage");
 const mongoose = require("mongoose");
 const slugify = require("slugify");
 const Propertyimage = require("../models/propertyimagesModel");
+const Propertyplan = require("../models/propertyfloorModel");
 
 const createProperty = asyncHandler(async (req, res) => {
   try {
@@ -81,6 +82,56 @@ const createProperty = asyncHandler(async (req, res) => {
       }
     }
     //res.json(newProperty);
+
+    const floorPlansnew = [];
+    if (req.files && Object.keys(req.files).length > 0) {
+    // Parse text fields like floorPlansget[0][title], etc.
+    Object.entries(req.body).forEach(([key, value]) => {
+      const match = key.match(/^floorPlans\[(\d+)]\[(\w+)]$/);
+      if (match) {
+        const [, index, field] = match;
+        if (!floorPlansnew[index]) floorPlansnew[index] = {};
+        floorPlansnew[index][field] = value;
+      }
+    });
+
+    // Parse uploaded files with fieldnames like floorPlansget[0][planimageget]
+    (req.files || []).forEach((file) => {
+      const match = file.fieldname.match(/^floorPlans\[(\d+)]\[planimage]$/);
+      if (match) {
+        const index = parseInt(match[1]);
+        if (!floorPlansnew[index]) floorPlansnew[index] = {};
+        floorPlansnew[index].floorPlansnew = file;
+      }
+    });
+    }
+    // Now process each floor plan
+    for (let i = 0; i < req.body.floorPlans?.length; i++) {
+      const plan = req.body.floorPlans[i];
+      const planimage = floorPlansnew[i];
+      if (plan) {
+        var plandata={
+            "title":req.body.floorPlans[i].title,
+            "bedroom":req.body.floorPlans[i].bedroom,
+            "price":req.body.floorPlans[i].price,
+            "areasize":req.body.floorPlans[i].areasize,
+            "description":req.body.floorPlans[i].description,
+            "propertyid":newProperty._id
+        }
+
+      
+    if(planimage){
+        const processedImages = await processFloorPlanImagesAdd(planimage); // assumes it returns [{url: "..."}]
+        if (processedImages?.length > 0) {
+          plandata.planimageurl = processedImages[0].url;
+        }
+      } 
+      console.log("plandata")
+      console.log(plandata)
+      const newPropertyplan = await Propertyplan.create(plandata);       
+      // const newPropertyplan = await Landingplan.create(plandata);        
+      }
+    }
     const message={
       "status":"success",
       "message":"Data Add sucessfully",
@@ -88,6 +139,9 @@ const createProperty = asyncHandler(async (req, res) => {
     }
     res.json(message);
   } catch (error) {
+     if (error.code === "LIMIT_FILE_SIZE") {
+      return res.status(400).json({ message: "File too large. Max size is 2MB." });
+    }
     throw new Error(error);
   }
 });
@@ -196,10 +250,15 @@ const updateProperty = asyncHandler(async (req, res) => {
     // res.json(updatedProperty);
   } catch (error) {
     console.error("Caught in route:", error);
+    if (error.code === "LIMIT_FILE_SIZE") {
+      return res.status(400).json({ message: "File too large. Max size is 2MB." });
+    }
+    
     res.status(500).json({
       message: "Internal Server Error",
       ...(process.env.NODE_ENV !== 'production' && { error: err.message }),
     });
+    
     throw new Error(error);
   }
 });

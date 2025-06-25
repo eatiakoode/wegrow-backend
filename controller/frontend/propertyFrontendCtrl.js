@@ -44,7 +44,7 @@ const getallPropertyList = asyncHandler(async (req, res) => {
       limit=req.query.limit;
       skip=req.query.skip;     
   }
-    const getallProperty = await Property.find(query).populate("cityid").populate("categoryid").populate("propertytypeid").populate("locationid").sort({updated_at: -1}).skip((skip - 1) * limit).limit(parseInt(limit)).lean();
+    const getallProperty = await Property.find(query).populate("cityid").populate("categoryid").populate("propertytypeid").populate("locationid").sort({createdAt: -1}).skip((skip - 1) * limit).limit(parseInt(limit)).lean();
     res.json(getallProperty);
   } catch (error) {
     throw new Error(error);
@@ -111,7 +111,6 @@ const getallPropertyFilterList = asyncHandler(async (req, res) => {
         .populate("categoryid")
         .populate("propertytypeid")
         .populate("locationid")
-        // .sort({ updated_at: -1 })
         .sort({ _id: -1})
         .skip((skip - 1) * limit)
         .limit(limit)
@@ -135,7 +134,7 @@ const getPropertySlug = asyncHandler(async (req, res) => {
   const { slug } = req.params;
   // validateMongoDbId(slug);
   try {
-    const getProperty = await Property.findOne({ slug: slug }).populate("cityid").populate("categoryid").populate("propertytypeid").populate("locationid").populate("constructionstatus").populate("furnishingstatus").populate("amenityid").populate('images').populate("floorplan").populate("builderid").lean();
+    const getProperty = await Property.findOne({ slug: slug }).populate("cityid").populate("categoryid").populate("propertytypeid").populate("locationid").populate("constructionstatus").populate("furnishingstatus").populate("amenityid").populate('images').populate("floorplan").populate("builderid").populate("sellerid").lean();
     const message={
       "status":"success",
       "message":"Data deleted sucessfully",
@@ -244,7 +243,7 @@ const propertyListByPage = asyncHandler(async (req, res) => {
         .populate("categoryid")
         .populate("propertytypeid")
         .populate("locationid")
-        .sort({ updated_at: -1 })
+        .sort({createdAt: -1})
         .skip((skip - 1) * limit)
         .limit(limit)
         .lean(),
@@ -356,7 +355,7 @@ const propertyListByBuilder = asyncHandler(async (req, res) => {
         .populate("categoryid")
         .populate("propertytypeid")
         .populate("locationid")
-        .sort({ updated_at: -1 })
+        .sort({createdAt: -1})
         .skip((skip - 1) * limit)
         .limit(limit)
         .lean(),

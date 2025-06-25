@@ -114,7 +114,7 @@ const createPropertyplan = asyncHandler(async (req, res) => {
     //res.json(newProperty);
     const message={
       "status":"success",
-      "message":"Data Add sucessfully",
+      "message":"Floor Plan Data Updated sucessfully",
     //   "data":newPropertyplan
     }
     res.json(message);

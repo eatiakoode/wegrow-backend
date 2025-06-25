@@ -45,6 +45,7 @@ const enqRouter = require("./routes/enqRoute");
 const enqPropertyRouter = require("./routes/enqPropertyRoute");
 const enqLandingRouter = require("./routes/enqLandingRoute");
 const cityGlimpseRouter = require("./routes/cityGlimpseRouter");
+const sellerRouter = require("./routes/sellerRouter");
 
 
 
@@ -121,6 +122,8 @@ app.use("/admin/api/enquiry", enqRouter);
 app.use("/admin/api/propertyenquiry", enqPropertyRouter);
 app.use("/admin/api/landingenquiry", enqLandingRouter);
 app.use("/admin/api/cityglimpse", cityGlimpseRouter);
+
+app.use("/admin/api/seller", sellerRouter);
 
 
 // Frontend API

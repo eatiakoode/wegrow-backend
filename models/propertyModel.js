@@ -161,6 +161,11 @@ var propertySchema = new mongoose.Schema(
       ref: "Builder", // 🔗 This should match the name you used in mongoose.model("Builder", ...)
       // required: true,
     },
+    sellerid: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Seller", // 🔗 This should match the name you used in mongoose.model("Builder", ...)
+      // required: true,
+    },
     agentid: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Agent", // 🔗 This should match the name you used in mongoose.model("Agent", ...)
