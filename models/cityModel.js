@@ -23,9 +23,9 @@ var citySchema = new mongoose.Schema(
     },
     description:{
       type: String,
-      required: true,
-      unique: true,
-      index: true,
+      // required: true,
+      // unique: true,
+      // index: true,
     },
     stateid: {
       type: mongoose.Schema.Types.ObjectId,

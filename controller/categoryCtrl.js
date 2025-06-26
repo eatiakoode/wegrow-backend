@@ -17,7 +17,13 @@ const updateCategory = asyncHandler(async (req, res) => {
     const updatedCategory = await Category.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedCategory);
+    // res.json(updatedCategory);
+     const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedCategory
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }

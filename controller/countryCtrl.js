@@ -22,7 +22,13 @@ const updateCountry = asyncHandler(async (req, res) => {
     const updatedCountry = await Country.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedCountry);
+    // res.json(updatedCountry);
+     const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedCountry
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }

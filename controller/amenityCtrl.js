@@ -37,7 +37,13 @@ const updateAmenity = asyncHandler(async (req, res) => {
     const updatedAmenity = await Amenity.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedAmenity);
+    // res.json(updatedAmenity);
+    const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedAmenity
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }

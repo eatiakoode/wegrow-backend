@@ -23,7 +23,13 @@ const updateLocation = asyncHandler(async (req, res) => {
     const updatedLocation = await Location.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedLocation);
+    // res.json(updatedLocation);
+    const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedLocation
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }

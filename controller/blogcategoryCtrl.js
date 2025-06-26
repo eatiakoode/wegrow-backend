@@ -22,7 +22,13 @@ const updateBlogcategory = asyncHandler(async (req, res) => {
     const updatedBlogcategory = await Blogcategory.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedBlogcategory);
+     const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedBlogcategory
+    }
+    res.json(message);
+    // res.json(updatedBlogcategory);
   } catch (error) {
     throw new Error(error);
   }

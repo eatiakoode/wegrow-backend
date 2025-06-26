@@ -23,7 +23,13 @@ const updatePropertytype = asyncHandler(async (req, res) => {
     const updatedPropertytype = await Propertytype.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedPropertytype);
+    // res.json(updatedPropertytype);
+    const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedPropertytype
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }

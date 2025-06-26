@@ -22,7 +22,13 @@ const updateState = asyncHandler(async (req, res) => {
     const updatedState = await State.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.json(updatedState);
+    const message={
+      "status":"success",
+      "message":"Data updated sucessfully",
+      "data":updatedState
+    }
+    res.json(message);
+    // res.json(updatedState);
   } catch (error) {
     throw new Error(error);
   }
