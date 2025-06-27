@@ -487,6 +487,159 @@ const bannerImageResize = async (req) => {
 
   return processedFilenames;
 };
+// const featuredImageResizeAdd = async (req) => {
+//  console.log("featuredImageResizeAdd")
+// console.log(req)
+//   const processedFilenames = [];
+//   await Promise.all(
+//     req.map(async (file) => {
+//       // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+//       const filename =file.filename
+//       const outputPath = path.join("public", "images", "property", filename);
+//       const ext = path.extname(file.originalname).toLowerCase();
+//       const isSvg = ext === '.svg';
+
+//       const outputDir = path.join("public", "images", "property");
+//         if (!fs.existsSync(outputDir)) {
+//           fs.mkdirSync(outputDir, { recursive: true });
+//         }
+
+//       if (isSvg) {
+//       const outputPath1 = path.join(outputDir, filename);
+        
+//         // Copy SVG file
+//         fs.copyFileSync(file.path, outputPath1);
+//         // await fs.promises.writeFile(outputPath, file.data);
+//       } else {
+//       await sharp(file.path)
+//         .resize(1920, 1080)
+//         .toFormat("jpeg")
+//         .jpeg({ quality: 90 })
+//         .toFile(outputPath);
+//       }
+
+//       // fs.unlinkSync(file.path); // delete original uploaded file
+
+//       processedFilenames.push(filename);
+//     })
+//   );
+
+//   return processedFilenames;
+// };
+const featuredImageResizeAdd = async (req) => {
+  console.log("featuredImageResizeAdd");
+  const processedFilenames = [];
+  const outputDir = path.join("public", "images", "property");
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  await Promise.all(
+    req.map(async (file) => {
+      const filename = file.filename;
+      const ext = path.extname(file.originalname).toLowerCase();
+      const isSvg = ext === ".svg";
+      const outputPath = path.join(outputDir, filename);
+
+      try {
+        if (isSvg) {
+          fs.copyFileSync(file.path, outputPath);
+        } else {
+          await sharp(file.path, { failOnError: false }) // 👈 suppress decoding failure
+            .resize(1920, 1080)
+            .toFormat("jpeg")
+            .jpeg({ quality: 90 })
+            .toFile(outputPath);
+        }
+
+        processedFilenames.push(filename);
+      } catch (err) {
+        console.error(`❌ Skipping file [${filename}]: ${err.message}`);
+        // Optionally: notify frontend or log
+      }
+    })
+  );
+
+  return processedFilenames;
+};
+// const featuredImageResizeAddSite = async (req) => {
+//  console.log("featuredImageResizeAddSite")
+// console.log(req)
+//   const processedFilenames = [];
+//   await Promise.all(
+//     req.map(async (file) => {
+//       // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+//       const filename =file.filename
+//       const outputPath = path.join("public", "images", "siteplan", filename);
+//       const ext = path.extname(file.originalname).toLowerCase();
+//       const isSvg = ext === '.svg';
+
+//       const outputDir = path.join("public", "images", "siteplan");
+//         if (!fs.existsSync(outputDir)) {
+//           fs.mkdirSync(outputDir, { recursive: true });
+//         }
+
+//       if (isSvg) {
+//       const outputPath1 = path.join(outputDir, filename);
+        
+//         // Copy SVG file
+//         // fs.copyFileSync(file.path, outputPath1);
+//         // await fs.promises.writeFile(outputPath, file.data);
+//       } else {
+//       await sharp(file.path)
+//         .resize(1920, 1080)
+//         .toFormat("jpeg")
+//         .jpeg({ quality: 90 })
+//         .toFile(outputPath);
+//       }
+
+//       // fs.unlinkSync(file.path); // delete original uploaded file
+
+//       processedFilenames.push(filename);
+//     })
+//   );
+
+//   return processedFilenames;
+// };
+
+const featuredImageResizeAddSite = async (req) => {
+  console.log("featuredImageResizeAddSite");
+  const processedFilenames = [];
+  const outputDir = path.join("public", "images", "siteplan");
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  await Promise.all(
+    req.map(async (file) => {
+      const filename = file.filename;
+      const ext = path.extname(file.originalname).toLowerCase();
+      const isSvg = ext === ".svg";
+      const outputPath = path.join(outputDir, filename);
+
+      try {
+        if (isSvg) {
+          fs.copyFileSync(file.path, outputPath); // ✅ SVG copy restored
+        } else {
+          await sharp(file.path, { failOnError: false }) // ✅ added
+            .resize(1920, 1080)
+            .toFormat("jpeg")
+            .jpeg({ quality: 90 })
+            .toFile(outputPath);
+        }
+
+        processedFilenames.push(filename);
+      } catch (err) {
+        console.error(`⚠️ Skipped file ${filename}: ${err.message}`);
+        // You can optionally collect skipped files
+      }
+    })
+  );
+
+  return processedFilenames;
+};
 const aboutImageResize = async (req) => {
  
   if (!req.files.aboutimage || !Array.isArray(req.files.aboutimage)) return;
@@ -531,9 +684,37 @@ const gallerySelectedImgsResize = async (req) => {
         .jpeg({ quality: 90 })
         .toFile(outputPath);
 
-      fs.unlinkSync(file.path); // delete original uploaded file
+      // fs.unlinkSync(file.path); // delete original uploaded file
 
       processedFilenames.push("public/images/landing/"+filename);
+    })
+  );
+
+  return processedFilenames;
+};
+const propertySelectedImgsResizeadd = async (req) => {
+
+  // if (!req.files.gallerySelectedImgs || !Array.isArray(req.files.gallerySelectedImgs)) return;
+console.log("propertySelectedImgsResizeadd")
+console.log(req)
+
+  const processedFilenames = [];
+  await Promise.all(
+    req.map(async (file) => {
+      
+      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+      const filename =file.filename
+      const outputPath = path.join("public", "images", "propertyimage", filename);
+
+      await sharp(file.path)
+        .resize(750, 450)
+        .toFormat("jpeg")
+        .jpeg({ quality: 90 })
+        .toFile(outputPath);
+
+      // fs.unlinkSync(file.path); // delete original uploaded file
+
+      processedFilenames.push("public/images/propertyimage/"+filename);
     })
   );
 
@@ -586,4 +767,28 @@ const processUploadedPDFs = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd};
+const processUploadedPDFsadd = async (req) => {
+ 
+  // if (!req.files.pdffile || !Array.isArray(req.files.pdffile)) return;
+
+  const processedFilenames = [];
+
+  await Promise.all(
+    req.map(async (file) => {
+     
+      const filename = file.filename;
+      const outputPath = path.join("public", "images", "pdffile", filename);
+
+      // Ensure destination directory exists
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
+      // Move file from temp location to target
+      fs.renameSync(file.path, outputPath);
+
+      processedFilenames.push(filename);
+    })
+  );
+
+  return processedFilenames;
+};
+module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd};

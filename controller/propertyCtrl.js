@@ -1,7 +1,7 @@
 const Property = require("../models/propertyModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId");
-const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd } = require("../middlewares/uploadImage");
+const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd,groupFilesByFieldname,groupFilesByFieldname2,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd } = require("../middlewares/uploadImage");
 const mongoose = require("mongoose");
 const slugify = require("slugify");
 const Propertyimage = require("../models/propertyimagesModel");
@@ -16,45 +16,75 @@ const createProperty = asyncHandler(async (req, res) => {
       if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
         console.log("no propertySelectedImgs")
          propertySelectedImgs  = await propertySelectedImgsResize(req);
+         console.log(propertySelectedImgs)
         if (propertySelectedImgs.length > 0) {
           // ✅ Append logo filename to req.body
           // console.log("Property Images:", propertySelectedImgs);
           req.body.propertyimageurl = propertySelectedImgs;
         }
       }
-     
-      if (req.files && req.files.featuredimage && Array.isArray(req.files.featuredimage) && req.files.featuredimage.length > 0 ) { 
-        console.log(req.files.featuredimage)
-        console.log("no featuredImageResize")
-        const processedImages  =await featuredImageResize(req);
-        if (processedImages.length > 0) {
-          // ✅ Append logo filename to req.body
-          req.body.featuredimageurl = "public/images/property/"+processedImages[0];
-        }
-      }
-      if (req.files && req.files.siteplan && Array.isArray(req.files.siteplan) && req.files.siteplan.length > 0 ) { 
+      const filesByField = groupFilesByFieldname(req.files);
+      
+      if (filesByField.featuredimage && filesByField.featuredimage.length > 0) {
         
-        console.log(req.files.siteplan)
-        console.log("no siteplan")
-        const processedImagesplan  =await sitePlanResize(req);
-
-        if (processedImagesplan.length > 0) {
-          // ✅ Append logo filename to req.body
-          req.body.siteplanurl = "public/images/siteplan/"+processedImagesplan[0];
+        const processedImages = await featuredImageResizeAdd(filesByField.featuredimage);
+        
+        if (processedImages.length > 0) {
+          req.body.featuredimageurl = "public/images/property/" + processedImages[0];
         }
       }
-      if (req.files && req.files.pdffile && Array.isArray(req.files.pdffile) && req.files.pdffile.length > 0 ) { 
+
+      if (filesByField.siteplan && filesByField.siteplan.length > 0) {
+              
+        const processedImages = await featuredImageResizeAddSite(filesByField.siteplan);
+        
+        if (processedImages.length > 0) {
+          req.body.siteplanurl = "public/images/siteplan/" + processedImages[0];
+        }
+      }
+
+      if (filesByField.pdffile && filesByField.pdffile.length > 0) {
+              console.log("pdffile")
+        const processedImages = await processUploadedPDFsadd(filesByField.pdffile);
+         console.log(processedImages)
+        if (processedImages.length > 0) {
+          req.body.brochurepdf = "public/images/pdffile/" + processedImages[0];
+        }
+      }
+     
+      // if (req.files && req.files.featuredimage && Array.isArray(req.files.featuredimage) && req.files.featuredimage.length > 0 ) { 
+      //   console.log(req.files.featuredimage)
+      //   console.log("no featuredImageResize")
+      //   const processedImages  =await featuredImageResize(req);
+      //     console.log(processedImages)
+      //   if (processedImages.length > 0) {
+      //     // ✅ Append logo filename to req.body
+      //     req.body.featuredimageurl = "public/images/property/"+processedImages[0];
+      //   }
+      // }
+//       if (req.files && req.files.siteplan && Array.isArray(req.files.siteplan) && req.files.siteplan.length > 0 ) { 
+        
+//         console.log(req.files.siteplan)
+//         console.log("no siteplan")
+//         const processedImagesplan  =await sitePlanResize(req);
+// console.log(processedImagesplan)
+//         if (processedImagesplan.length > 0) {
+//           // ✅ Append logo filename to req.body
+//           req.body.siteplanurl = "public/images/siteplan/"+processedImagesplan[0];
+//         }
+//       }
+    //   if (req.files && req.files.pdffile && Array.isArray(req.files.pdffile) && req.files.pdffile.length > 0 ) { 
         
        
-        const processedImagesplan  =await processUploadedPDFs(req);
+    //     const processedImagesplan  =await processUploadedPDFs(req);
 
-        if (processedImagesplan.length > 0) {
-          console.log("pdfshow processedImagesplan")
-    console.log(processedImagesplan)
-          // ✅ Append logo filename to req.body
-          req.body.brochurepdf = "public/images/pdffile/"+processedImagesplan[0];
-        }
-      }
+    //     if (processedImagesplan.length > 0) {
+    //       console.log("pdfshow processedImagesplan")
+    // console.log(processedImagesplan)
+    //       // ✅ Append logo filename to req.body
+    //       req.body.brochurepdf = "public/images/pdffile/"+processedImagesplan[0];
+    //     }
+    //   }
       
     }
 
@@ -67,20 +97,34 @@ const createProperty = asyncHandler(async (req, res) => {
     req.body.pricesqft = parseFloat(req.body.pricesqft.replace(/,/g, ""));
 
     const newProperty = await Property.create(req.body);
-    if (propertySelectedImgs.length > 0) {
-      // ✅ Append logo filename to req.body
-      // console.log("Property Images:", propertySelectedImgs);
-      // req.body.propertyimageurl = propertySelectedImgs;
-      for(var i=0;i<propertySelectedImgs.length;i++){
-        var propertyimage={
-          "image":propertySelectedImgs[i],
-          "propertyid":newProperty._id,
-          "title":newProperty.title
-        }
-        const newPropertyw = await Propertyimage.create(propertyimage);
+    // if (propertySelectedImgs.length > 0) {
+    //   // ✅ Append logo filename to req.body
+    //   // console.log("Property Images:", propertySelectedImgs);
+    //   // req.body.propertyimageurl = propertySelectedImgs;
+    //   for(var i=0;i<propertySelectedImgs.length;i++){
+    //     var propertyimage={
+    //       "image":propertySelectedImgs[i],
+    //       "propertyid":newProperty._id,
+    //       "title":newProperty.title
+    //     }
+    //     const newPropertyw = await Propertyimage.create(propertyimage);
 
-      }
-    }
+    //   }
+    // }
+
+    const filesByFields = groupFilesByFieldname2(req.files);
+          var gallerySelectedImgsget  =[]
+          if (filesByFields.propertySelectedImgs && filesByFields.propertySelectedImgs.length > 0) {          
+              gallerySelectedImgsget  = await propertySelectedImgsResizeadd(filesByFields.propertySelectedImgs);
+              for(var i=0;i<gallerySelectedImgsget.length;i++){
+                var propertyimage={
+                  "image":gallerySelectedImgsget[i],
+                  "propertyid":newProperty._id,
+                  "title":req.body.title
+                }
+                const newLandimage = await Propertyimage.create(propertyimage);    
+              }
+          }
     //res.json(newProperty);
 
     const floorPlansnew = [];
