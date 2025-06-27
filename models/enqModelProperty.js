@@ -22,7 +22,12 @@ var enqSchemaProperty = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Property", 
     required: true,
-},
+  },
+  sellerid:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Seller", 
+      required: true,
+  },
 //   date: {
 //     type: Date,
 //     required: true,

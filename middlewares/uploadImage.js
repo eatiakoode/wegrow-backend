@@ -315,7 +315,6 @@ const processFloorPlanImages = async (req) => {
  
       const filename = `floorplan-${Date.now()}-${file.originalname}.jpeg`;
       const outputPath = path.join("public", "images", "propertyplan", filename);
-      console.log("test2")
       await sharp(file.path)
         .resize(750, 450)
         .toFormat("jpeg")
@@ -527,7 +526,6 @@ const bannerImageResize = async (req) => {
 //   return processedFilenames;
 // };
 const featuredImageResizeAdd = async (req) => {
-  console.log("featuredImageResizeAdd");
   const processedFilenames = [];
   const outputDir = path.join("public", "images", "property");
 
@@ -604,7 +602,6 @@ const featuredImageResizeAdd = async (req) => {
 // };
 
 const featuredImageResizeAddSite = async (req) => {
-  console.log("featuredImageResizeAddSite");
   const processedFilenames = [];
   const outputDir = path.join("public", "images", "siteplan");
 
@@ -695,8 +692,7 @@ const gallerySelectedImgsResize = async (req) => {
 const propertySelectedImgsResizeadd = async (req) => {
 
   // if (!req.files.gallerySelectedImgs || !Array.isArray(req.files.gallerySelectedImgs)) return;
-console.log("propertySelectedImgsResizeadd")
-console.log(req)
+
 
   const processedFilenames = [];
   await Promise.all(
