@@ -23,6 +23,10 @@ var propertySchema = new mongoose.Schema(
       // unique: true,
       // index: true,
     },
+    highlights: {
+      type: String,
+      
+    },
     price: {
       type: String,
       required: true,
@@ -233,6 +237,30 @@ var propertySchema = new mongoose.Schema(
       // index: true,
     },
     siteplanurl:{
+      type: String,
+      // required: true,
+      // unique: true,
+      // index: true,
+    },
+    paymentplan:{
+      type: String,
+      // required: true,
+      // unique: true,
+      // index: true,
+    },
+    foodcourt:{
+      type: Boolean,
+      // required: true,
+      // unique: true,
+      // index: true,
+    },
+    multiplex:{
+      type: Boolean,
+      // required: true,
+      // unique: true,
+      // index: true,
+    },
+    masterplanurl:{
       type: String,
       // required: true,
       // unique: true,

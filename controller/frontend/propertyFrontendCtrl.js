@@ -44,7 +44,7 @@ const getallPropertyList = asyncHandler(async (req, res) => {
       limit=req.query.limit;
       skip=req.query.skip;     
   }
-    const getallProperty = await Property.find(query).populate("cityid").populate("categoryid").populate("propertytypeid").populate("locationid").sort({createdAt: -1}).skip((skip - 1) * limit).limit(parseInt(limit)).lean();
+    const getallProperty = await Property.find(query).populate("cityid").populate("categoryid").populate("propertytypeid").populate("locationid").populate("sellerid").sort({createdAt: -1}).skip((skip - 1) * limit).limit(parseInt(limit)).lean();
     res.json(getallProperty);
   } catch (error) {
     throw new Error(error);
@@ -111,6 +111,7 @@ const getallPropertyFilterList = asyncHandler(async (req, res) => {
         .populate("categoryid")
         .populate("propertytypeid")
         .populate("locationid")
+        .populate("sellerid")
         .sort({ _id: -1})
         .skip((skip - 1) * limit)
         .limit(limit)
