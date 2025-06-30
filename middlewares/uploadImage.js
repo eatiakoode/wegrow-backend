@@ -192,6 +192,33 @@ const sitePlanResize = async (req) => {
 
   return processedFilenames;
 };
+const masterPlanResize = async (req) => {
+  
+
+  if (!req.files.masterplan || !Array.isArray(req.files.masterplan)) return;
+
+  const processedFilenames = [];
+ 
+  await Promise.all(
+    req.files.masterplan.map(async (file) => {
+      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+      const filename =file.filename
+      const outputPath = path.join("public", "images", "masterplan", filename);
+
+      await sharp(file.path)
+        .resize(800, 420)
+        .toFormat("jpeg")
+        .jpeg({ quality: 90 })
+        .toFile(outputPath);
+
+      fs.unlinkSync(file.path); // delete original uploaded file
+
+      processedFilenames.push(filename);
+    })
+  );
+
+  return processedFilenames;
+};
 const testimonialImgResize = async (req) => {
   if (!req.files || !Array.isArray(req.files)) return;
 
@@ -637,6 +664,42 @@ const featuredImageResizeAddSite = async (req) => {
 
   return processedFilenames;
 };
+const featuredImageResizeAddMaster = async (req) => {
+  const processedFilenames = [];
+  const outputDir = path.join("public", "images", "masterplan");
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  await Promise.all(
+    req.map(async (file) => {
+      const filename = file.filename;
+      const ext = path.extname(file.originalname).toLowerCase();
+      const isSvg = ext === ".svg";
+      const outputPath = path.join(outputDir, filename);
+
+      try {
+        if (isSvg) {
+          fs.copyFileSync(file.path, outputPath); // ✅ SVG copy restored
+        } else {
+          await sharp(file.path, { failOnError: false }) // ✅ added
+            .resize(1920, 1080)
+            .toFormat("jpeg")
+            .jpeg({ quality: 90 })
+            .toFile(outputPath);
+        }
+
+        processedFilenames.push(filename);
+      } catch (err) {
+        console.error(`⚠️ Skipped file ${filename}: ${err.message}`);
+        // You can optionally collect skipped files
+      }
+    })
+  );
+
+  return processedFilenames;
+};
 const aboutImageResize = async (req) => {
  
   if (!req.files.aboutimage || !Array.isArray(req.files.aboutimage)) return;
@@ -787,4 +850,4 @@ const processUploadedPDFsadd = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd};
+module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster};

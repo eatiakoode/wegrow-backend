@@ -1,7 +1,7 @@
 const Property = require("../models/propertyModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId");
-const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd,groupFilesByFieldname,groupFilesByFieldname2,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd } = require("../middlewares/uploadImage");
+const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd,groupFilesByFieldname,groupFilesByFieldname2,featuredImageResizeAdd,featuredImageResizeAddSite,featuredImageResizeAddMaster,propertySelectedImgsResizeadd,processUploadedPDFsadd,masterPlanResize } = require("../middlewares/uploadImage");
 const mongoose = require("mongoose");
 const slugify = require("slugify");
 const Propertyimage = require("../models/propertyimagesModel");
@@ -40,6 +40,14 @@ const createProperty = asyncHandler(async (req, res) => {
         
         if (processedImages.length > 0) {
           req.body.siteplanurl = "public/images/siteplan/" + processedImages[0];
+        }
+      }
+      if (filesByField.masterplan && filesByField.masterplan.length > 0) {
+              
+        const processedImages = await featuredImageResizeAddMaster(filesByField.masterplan);
+        
+        if (processedImages.length > 0) {
+          req.body.masterplanurl = "public/images/masterplan/" + processedImages[0];
         }
       }
 
@@ -226,6 +234,17 @@ const updateProperty = asyncHandler(async (req, res) => {
           req.body.siteplanurl = "public/images/siteplan/"+processedImagesplan[0];
         }
       }
+      if (req.files && req.files.masterplan && Array.isArray(req.files.masterplan) && req.files.masterplan.length > 0 ) { 
+        
+        
+        const processedImagesplan  =await masterPlanResize(req);
+
+        if (processedImagesplan.length > 0) {
+          // ✅ Append logo filename to req.body
+          req.body.masterplanurl = "public/images/masterplan/"+processedImagesplan[0];
+        }
+      }
+      
       if (req.files && req.files.pdffile && Array.isArray(req.files.pdffile) && req.files.pdffile.length > 0 ) { 
         
        
