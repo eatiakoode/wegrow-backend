@@ -373,6 +373,7 @@ const getallProperty = asyncHandler(async (req, res) => {
           Property.find()
             .populate("cityid")
             .populate("categoryid")
+            .populate("locationid")
             .sort({ _id: -1})
             .skip((skip - 1) * limit)
             .limit(limit)
