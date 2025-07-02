@@ -39,6 +39,12 @@ var blogSchema = new mongoose.Schema(
     date:{
       type: String,
     },
+    metatitle:{
+      type: String,
+    },
+    metadescription:{
+      type: String,
+    },
     status: {
       type: Boolean,
       default: true,

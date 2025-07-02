@@ -29,6 +29,12 @@ var builderSchema = new mongoose.Schema(
       unique: true,
       index: true,
     },
+    metatitle:{
+      type: String,
+    },
+    metadescription:{
+      type: String,
+    },
     status: {
       type: Boolean,
       default: true,

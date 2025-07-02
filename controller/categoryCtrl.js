@@ -1,11 +1,21 @@
-const Category = require("../models/categoryModel.js");
+const Category = require("../models/categoryModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId.js");
+const slugify = require("slugify");
 
 const createCategory = asyncHandler(async (req, res) => {
   try {
+   
+    req.body.slug  = slugify(req.body.slug.toLowerCase());
     const newCategory = await Category.create(req.body);
-    res.json(newCategory);
+    const message={
+      "status":"success",
+      "message":"Data Add sucessfully",
+      "data":newCategory
+    }
+    res.json(message);
+    // const newCategory = await Category.create(req.body);
+    // res.json(newCategory);
   } catch (error) {
     throw new Error(error);
   }
@@ -14,6 +24,7 @@ const updateCategory = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
+     
     const updatedCategory = await Category.findByIdAndUpdate(id, req.body, {
       new: true,
     });
@@ -33,7 +44,13 @@ const deleteCategory = asyncHandler(async (req, res) => {
   validateMongoDbId(id);
   try {
     const deletedCategory = await Category.findByIdAndDelete(id);
-    res.json(deletedCategory);
+    // res.json(deletedCategory);
+    const message={
+      "status":"success",
+      "message":"Data deleted sucessfully",
+      "data":deletedCategory
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }
@@ -43,15 +60,45 @@ const getCategory = asyncHandler(async (req, res) => {
   validateMongoDbId(id);
   try {
     const getaCategory = await Category.findById(id);
-    res.json(getaCategory);
+    // res.json(getaCategory);
+    const message={
+      "status":"success",
+      "message":"Data deleted sucessfully",
+      "data":getaCategory
+    }
+    res.json(message);
   } catch (error) {
     throw new Error(error);
   }
 });
 const getallCategory = asyncHandler(async (req, res) => {
   try {
-    const getallCategory = await Category.find();
-    res.json(getallCategory);
+    let limit=100;
+    let skip=1;
+    
+
+    if (req.query.limit ) {
+      limit=req.query.limit;
+      skip=req.query.skip;     
+  }
+    
+    const [getallCategory, totalCount] = await Promise.all([
+            Category.find()
+              .sort({ _id: -1})
+              .skip((skip - 1) * limit)
+              .limit(limit)
+              .lean(),
+          
+            Category.countDocuments() // total matching without skip/limit
+          ]);
+            res.status(200).json({
+          items: getallCategory,
+          totalCount: totalCount,
+          currentPage: skip,
+          totalPages: Math.ceil(totalCount / limit)
+        });
+    // const getallCategory = await Category.find();
+    // res.json(getallCategory);
   } catch (error) {
     throw new Error(error);
   }

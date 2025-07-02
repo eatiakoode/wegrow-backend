@@ -1,4 +1,6 @@
 const express = require("express");
+
+const { uploadPhoto } = require("../middlewares/uploadImage");
 const {
   createCategory,
   updateCategory,
@@ -9,8 +11,8 @@ const {
 const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
 const router = express.Router();
 
-router.post("/", authMiddleware, isAdmin, createCategory);
-router.put("/:id", authMiddleware, isAdmin, updateCategory);
+router.post("/", authMiddleware, isAdmin, uploadPhoto.array("logo", 10), createCategory);
+router.put("/:id", authMiddleware, isAdmin,uploadPhoto.array("logo", 10), updateCategory);
 router.delete("/:id", authMiddleware, isAdmin, deleteCategory);
 router.get("/:id", getCategory);
 router.get("/", getallCategory);
