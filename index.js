@@ -47,6 +47,7 @@ const enqLandingRouter = require("./routes/enqLandingRoute");
 const cityGlimpseRouter = require("./routes/cityGlimpseRouter");
 const sellerRouter = require("./routes/sellerRouter");
 const enqSubscribeRouter = require("./routes/enqSubscribeRoute");
+const enqBrochureRouter = require("./routes/enqBrochureRoute");
 
 
 
@@ -70,8 +71,7 @@ const builderFrontendRoute = require("./routes/frontend/builderRoute");
 const locationFrontendRoute = require("./routes/frontend/locationRoute");
 
 const enqSubscribeFrontendRouter = require("./routes/frontend/enqSubscribeRoute");
-
-
+const enqBrochureFrontendRouter = require("./routes/frontend/enqBrochureRoute");
 
 
 
@@ -129,6 +129,7 @@ app.use("/admin/api/cityglimpse", cityGlimpseRouter);
 
 app.use("/admin/api/seller", sellerRouter);
 app.use("/admin/api/subscribeenquiry", enqSubscribeRouter);
+app.use("/admin/api/brochureenquiry", enqBrochureRouter);
 
 
 
@@ -145,7 +146,8 @@ app.use("/frontend/api/propertypage", propertypageFrontendRoute);
 app.use("/frontend/api/landingpage", landingpageFrontendRoute);
 app.use("/frontend/api/landingenquiry", enqLandingFrontendRouter);
 
-app.use("/frontend/api/landingenquiry", enqLandingFrontendRouter);
+app.use("/frontend/api/subscribeenquiry", enqSubscribeFrontendRouter);
+app.use("/frontend/api/brochureenquiry", enqBrochureFrontendRouter);
 app.use("/frontend/api/category", categoryFrontendRoute);
 app.use("/frontend/api/builder", builderFrontendRoute);
 app.use("/frontend/api/location", locationFrontendRoute);

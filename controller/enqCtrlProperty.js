@@ -58,7 +58,7 @@ const getEnquiryProperty = asyncHandler(async (req, res) => {
 });
 const getallEnquiryProperty = asyncHandler(async (req, res) => {
   try {
-    const getallEnquiryProperty = await EnquiryProperty.find().populate("propertyid");
+    const getallEnquiryProperty = await EnquiryProperty.find().populate("propertyid").lean();
     res.json(getallEnquiryProperty);
   } catch (error) {
     throw new Error(error);
