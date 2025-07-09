@@ -30,6 +30,10 @@ var locationSchema = new mongoose.Schema(
       unique: true,
       index: true,
     },
+    istrending: {
+      type: Boolean,
+      default: true,
+    },
     status: {
       type: Boolean,
       default: true,

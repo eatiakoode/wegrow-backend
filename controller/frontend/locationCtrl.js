@@ -15,7 +15,21 @@ const getLocation = asyncHandler(async (req, res) => {
 });
 const getallLocation = asyncHandler(async (req, res) => {
   try {
-    const getallLocation = await Location.find({"status":true}).populate('cityid').lean();
+    let query = {};
+    // let query ={"status":true}
+    query["status"] =true;
+    
+    if(req.query.istrending=="yes"){
+      query["istrending"] = req.query.istrending;      
+    }
+    let limit=100;
+    let skip=1;
+
+    if (req.query.limit ) {
+      limit=req.query.limit;
+      skip=req.query.skip;     
+    }
+    const getallLocation = await Location.find(query).populate('cityid').skip((skip - 1) * limit).limit(parseInt(limit)).lean();
     res.json(getallLocation);
   } catch (error) {
     throw new Error(error);
