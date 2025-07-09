@@ -299,6 +299,35 @@ const cityImgResize = async (req) => {
 
   return processedFilenames;
 };
+
+
+const locationImgResize = async (req) => {
+
+  if (!req.files || !Array.isArray(req.files)) return;
+
+  const processedFilenames = [];
+
+  await Promise.all(
+    req.files.map(async (file) => {
+      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+      const filename =file.filename
+      const outputPath = path.join("public", "images", "location", filename);
+
+      await sharp(file.path)
+        .resize(755, 355)
+        .toFormat("jpeg")
+        .jpeg({ quality: 90 })
+        .toFile(outputPath);
+
+      // fs.unlinkSync(file.path); // delete original uploaded file
+
+
+      processedFilenames.push(filename);
+    })
+  );
+
+  return processedFilenames;
+};
 const processFloorPlanImagesAdd = async (req) => {
   const processedFilenames = [];
 
@@ -850,4 +879,4 @@ const processUploadedPDFsadd = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster};
+module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,locationImgResize};

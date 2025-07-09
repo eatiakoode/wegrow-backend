@@ -24,7 +24,8 @@ const updateCategory = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
-     
+    req.body.slug  = slugify(req.body.slug.toLowerCase());
+    
     const updatedCategory = await Category.findByIdAndUpdate(id, req.body, {
       new: true,
     });

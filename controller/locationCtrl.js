@@ -1,9 +1,16 @@
 const Location = require("../models/locationModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId");
+const { locationImgResize } = require("../middlewares/uploadImage");
 
 const createLocation = asyncHandler(async (req, res) => {
   try {
+     if(req.files){
+        const processedImages  =await locationImgResize(req);
+        if (processedImages.length > 0) {
+          req.body.locationlogoimage = "public/images/location/"+processedImages[0];
+        }
+      }
     const newLocation = await Location.create(req.body);
     //res.json(newLocation);
     const message={
@@ -20,6 +27,12 @@ const updateLocation = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
+    if(req.files){
+      const processedImages  =await locationImgResize(req);
+      if (processedImages.length > 0) {
+        req.body.locationlogoimage = "public/images/location/"+processedImages[0];
+      }
+    }
     const updatedLocation = await Location.findByIdAndUpdate(id, req.body, {
       new: true,
     });

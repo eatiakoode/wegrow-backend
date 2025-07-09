@@ -15,7 +15,7 @@ const getCategory = asyncHandler(async (req, res) => {
 });
 const getallCategory = asyncHandler(async (req, res) => {
   try {
-    const getallCategory = await Category.find().lean();
+    const getallCategory = await Category.find({"status":true}).lean();
     res.json(getallCategory);
   } catch (error) {
     throw new Error(error);
