@@ -15,6 +15,12 @@ var categorySchema = new mongoose.Schema(
       unique: true,
       index: true,
     },
+    logoimage:{
+      type: String,
+      // required: true,
+      unique: true,
+      index: true,
+    },
     h1title:{
       type: String,
     },

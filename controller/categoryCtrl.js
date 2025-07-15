@@ -2,10 +2,19 @@ const Category = require("../models/categoryModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId.js");
 const slugify = require("slugify");
+const { uploadPhoto, categoryImgResize } = require("../middlewares/uploadImage");
 
 const createCategory = asyncHandler(async (req, res) => {
   try {
-   
+   if(req.files){
+      const processedImages  =await categoryImgResize(req);
+      // console.log("newBuilderimage")
+      // console.log(processedImages)
+      if (processedImages.length > 0) {
+        // ✅ Append logo filename to req.body
+        req.body.logoimage = "public/images/category/"+processedImages[0];
+      }
+    }
     req.body.slug  = slugify(req.body.slug.toLowerCase());
     const newCategory = await Category.create(req.body);
     const message={
@@ -24,6 +33,12 @@ const updateCategory = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
+    if(req.files){
+      const processedImages  =await categoryImgResize(req);
+      if (processedImages.length > 0) {
+        req.body.logoimage = "public/images/category/"+processedImages[0];
+      }
+    }
     req.body.slug  = slugify(req.body.slug.toLowerCase());
     
     const updatedCategory = await Category.findByIdAndUpdate(id, req.body, {

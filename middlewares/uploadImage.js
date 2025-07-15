@@ -139,6 +139,70 @@ const builderImgResize = async (req) => {
 
   return processedFilenames;
 };
+// const categoryImgResize = async (req) => {
+//   if (!req.files || !Array.isArray(req.files)) return;
+
+//   const processedFilenames = [];
+
+//   await Promise.all(
+//     req.files.map(async (file) => {
+//       // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+//       const filename =file.filename
+//       const outputPath = path.join("public", "images", "category", filename);
+
+//       await sharp(file.path)
+//         .resize(750, 450)
+//         .toFormat("jpeg")
+//         .jpeg({ quality: 90 })
+//         .toFile(outputPath);
+
+//       fs.unlinkSync(file.path); // delete original uploaded file
+
+//       processedFilenames.push(filename);
+//     })
+//   );
+
+//   return processedFilenames;
+// };
+
+
+const categoryImgResize = async (req) => {
+  if (!req.files || !Array.isArray(req.files)) return;
+
+  const processedFilenames = [];
+
+  await Promise.all(
+    req.files.map(async (file) => {
+      const ext = path.extname(file.originalname).toLowerCase();
+      const filename = file.filename;
+      const outputPath = path.join("public", "images", "category", filename);
+
+      // Create folder if it doesn't exist
+      const outputDir = path.dirname(outputPath);
+      if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+      }
+
+      if (ext === ".webp") {
+        // Copy .webp without converting
+        fs.copyFileSync(file.path, outputPath);
+      } else {
+        // Convert other image formats to .jpeg using sharp
+        await sharp(file.path)
+          .resize(1920, 500)
+          .toFormat("jpeg")
+          .jpeg({ quality: 90 })
+          .toFile(outputPath);
+      }
+
+      fs.unlinkSync(file.path); // delete original uploaded file
+      processedFilenames.push(filename);
+    })
+  );
+
+  return processedFilenames;
+};
+
 
 const featuredImageResize = async (req) => {
   // if (!req.files.featuredimage || !Array.isArray(req.files.featuredimage)) return;
@@ -1142,4 +1206,4 @@ const processUploadedPDFsadd = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,locationImgResize};
+module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,locationImgResize,categoryImgResize};
