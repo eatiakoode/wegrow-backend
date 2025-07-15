@@ -13,16 +13,25 @@ const createProperty = asyncHandler(async (req, res) => {
     // console.log(req.files)
     if (req.files && Object.keys(req.files).length > 0) {
       var  propertySelectedImgs  =[]
-      if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
-        // console.log("no propertySelectedImgs")
-         propertySelectedImgs  = await propertySelectedImgsResize(req);
-        //  console.log(propertySelectedImgs)
-        if (propertySelectedImgs.length > 0) {
-          // ✅ Append logo filename to req.body
-          // console.log("Property Images:", propertySelectedImgs);
-          req.body.propertyimageurl = propertySelectedImgs;
-        }
-      }
+      // if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
+      //   // console.log("no propertySelectedImgs")
+      //    propertySelectedImgs  = await propertySelectedImgsResize(req);
+      //   //  console.log(propertySelectedImgs)
+      //   if (propertySelectedImgs.length > 0) {
+      //     // ✅ Append logo filename to req.body
+      //     // console.log("Property Images:", propertySelectedImgs);
+      //     req.body.propertyimageurl = propertySelectedImgs;
+      //   }
+      // }
+      const selectedImgs = req.files?.filter(file => file.fieldname === "propertySelectedImgs");
+
+if (Array.isArray(selectedImgs) && selectedImgs.length > 0) {
+  console.log("Filtered propertySelectedImgs:", selectedImgs);
+  propertySelectedImgs = await propertySelectedImgsResize(selectedImgs); // pass array directly
+  if (propertySelectedImgs.length > 0) {
+    req.body.propertyimageurl = propertySelectedImgs;
+  }
+}
       const filesByField = groupFilesByFieldname(req.files);
       
       if (filesByField.featuredimage && filesByField.featuredimage.length > 0) {
@@ -205,43 +214,64 @@ const updateProperty = asyncHandler(async (req, res) => {
     console.log(req.files)
 
     if (req.files && Object.keys(req.files).length > 0) {
+      // console.log("no propertySelectedImgs")
+      // var  propertySelectedImgs  =[]
+      // if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
+      //   console.log("no propertySelectedImgs")
+      //    propertySelectedImgs  = await propertySelectedImgsResize(req);
+      //   if (propertySelectedImgs.length > 0) {
+      //     // ✅ Append logo filename to req.body
+      //     // console.log("Property Images:", propertySelectedImgs);
+      //     req.body.propertyimageurl = propertySelectedImgs;
+      //   }
+      // }
+
+      // Filter manually from req.files
       var  propertySelectedImgs  =[]
-      if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
-        console.log("no propertySelectedImgs")
-         propertySelectedImgs  = await propertySelectedImgsResize(req);
-        if (propertySelectedImgs.length > 0) {
-          // ✅ Append logo filename to req.body
-          // console.log("Property Images:", propertySelectedImgs);
-          req.body.propertyimageurl = propertySelectedImgs;
-        }
-      }
+const selectedImgs = req.files?.filter(file => file.fieldname === "propertySelectedImgs");
+
+if (Array.isArray(selectedImgs) && selectedImgs.length > 0) {
+  console.log("Filtered propertySelectedImgs:", selectedImgs);
+  propertySelectedImgs = await propertySelectedImgsResize(selectedImgs); // pass array directly
+  if (propertySelectedImgs.length > 0) {
+    req.body.propertyimageurl = propertySelectedImgs;
+  }
+}
+
      
-      if (req.files && req.files.featuredimage && Array.isArray(req.files.featuredimage) && req.files.featuredimage.length > 0 ) { 
-       
-        const processedImages  =await featuredImageResize(req);
+      // if (req.files && req.files.featuredimage && Array.isArray(req.files.featuredimage) && req.files.featuredimage.length > 0 ) { 
+      //  console.log("no featuredImageResize")
+      //   const processedImages  =await featuredImageResize(req);
+      //   if (processedImages.length > 0) {
+      //     // ✅ Append logo filename to req.body
+      //     req.body.featuredimageurl = "public/images/property/"+processedImages[0];
+      //   }
+      // }
+      const filesByField = groupFilesByFieldname(req.files);
+            
+            if (filesByField.featuredimage && filesByField.featuredimage.length > 0) {
+              console.log("no featuredImageResize")
+              
+              const processedImages = await featuredImageResizeAdd(filesByField.featuredimage);
+              
+              if (processedImages.length > 0) {
+                req.body.featuredimageurl = "public/images/property/" + processedImages[0];
+              }
+            }
+      if (filesByField.siteplan && filesByField.siteplan.length > 0) {
+              
+        const processedImages = await featuredImageResizeAddSite(filesByField.siteplan);
+        
         if (processedImages.length > 0) {
-          // ✅ Append logo filename to req.body
-          req.body.featuredimageurl = "public/images/property/"+processedImages[0];
+          req.body.siteplanurl = "public/images/siteplan/" + processedImages[0];
         }
       }
-      if (req.files && req.files.siteplan && Array.isArray(req.files.siteplan) && req.files.siteplan.length > 0 ) { 
+      if (filesByField.masterplan && filesByField.masterplan.length > 0) {
+              
+        const processedImages = await featuredImageResizeAddMaster(filesByField.masterplan);
         
-        
-        const processedImagesplan  =await sitePlanResize(req);
-
-        if (processedImagesplan.length > 0) {
-          // ✅ Append logo filename to req.body
-          req.body.siteplanurl = "public/images/siteplan/"+processedImagesplan[0];
-        }
-      }
-      if (req.files && req.files.masterplan && Array.isArray(req.files.masterplan) && req.files.masterplan.length > 0 ) { 
-        
-        
-        const processedImagesplan  =await masterPlanResize(req);
-
-        if (processedImagesplan.length > 0) {
-          // ✅ Append logo filename to req.body
-          req.body.masterplanurl = "public/images/masterplan/"+processedImagesplan[0];
+        if (processedImages.length > 0) {
+          req.body.masterplanurl = "public/images/masterplan/" + processedImages[0];
         }
       }
       
@@ -251,8 +281,7 @@ const updateProperty = asyncHandler(async (req, res) => {
         const processedImagesplan  =await processUploadedPDFs(req);
 
         if (processedImagesplan.length > 0) {
-          console.log("pdfshow processedImagesplan")
-    console.log(processedImagesplan)
+          
           // ✅ Append logo filename to req.body
           req.body.brochurepdf = "public/images/pdffile/"+processedImagesplan[0];
         }

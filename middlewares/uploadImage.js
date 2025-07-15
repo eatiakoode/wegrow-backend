@@ -141,83 +141,197 @@ const builderImgResize = async (req) => {
 };
 
 const featuredImageResize = async (req) => {
+  // if (!req.files.featuredimage || !Array.isArray(req.files.featuredimage)) return;
+
+  // const processedFilenames = [];
+
+  // await Promise.all(
+  //   req.files.featuredimage.map(async (file) => {
+  //     // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+  //     const filename =file.filename
+  //     const outputPath = path.join("public", "images", "property", filename);
+
+  //     await sharp(file.path)
+  //       .resize(750, 450)
+  //       .toFormat("jpeg")
+  //       .jpeg({ quality: 90 })
+  //       .toFile(outputPath);
+
+  //     fs.unlinkSync(file.path); // delete original uploaded file
+
+  //     processedFilenames.push(filename);
+  //   })
+  // );
+
+  // return processedFilenames;
   if (!req.files.featuredimage || !Array.isArray(req.files.featuredimage)) return;
-
-  const processedFilenames = [];
-
-  await Promise.all(
-    req.files.featuredimage.map(async (file) => {
-      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
-      const filename =file.filename
-      const outputPath = path.join("public", "images", "property", filename);
-
-      await sharp(file.path)
-        .resize(750, 450)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
-
-      fs.unlinkSync(file.path); // delete original uploaded file
-
-      processedFilenames.push(filename);
-    })
-  );
-
-  return processedFilenames;
+  
+    const processedFilenames = [];
+  
+    const outputDir = path.join("public", "images", "property");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    await Promise.all(
+      req.files.featuredimage.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        // if (isSvg) {
+          // Copy SVG file
+          fs.copyFileSync(file.path, outputPath);
+          // await fs.promises.writeFile(outputPath, file.data);
+        // } else {
+        //   // Resize non-SVG file
+        //   await sharp(file.path)
+        //     .resize(650, 400)
+        //     .toFormat('jpeg')
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
+  
+        // Optional cleanup
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push(filename);
+      })
+    );
+  
+    return processedFilenames;
 };
 const sitePlanResize = async (req) => {
   
 
-  if (!req.files.siteplan || !Array.isArray(req.files.siteplan)) return;
+  // if (!req.files.siteplan || !Array.isArray(req.files.siteplan)) return;
 
-  const processedFilenames = [];
+  // const processedFilenames = [];
  
-  await Promise.all(
-    req.files.siteplan.map(async (file) => {
-      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
-      const filename =file.filename
-      const outputPath = path.join("public", "images", "siteplan", filename);
+  // await Promise.all(
+  //   req.files.siteplan.map(async (file) => {
+  //     // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+  //     const filename =file.filename
+  //     const outputPath = path.join("public", "images", "siteplan", filename);
 
-      await sharp(file.path)
-        .resize(800, 420)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
+  //     await sharp(file.path)
+  //       .resize(800, 420)
+  //       .toFormat("jpeg")
+  //       .jpeg({ quality: 90 })
+  //       .toFile(outputPath);
 
-      fs.unlinkSync(file.path); // delete original uploaded file
+  //     fs.unlinkSync(file.path); // delete original uploaded file
 
-      processedFilenames.push(filename);
-    })
-  );
+  //     processedFilenames.push(filename);
+  //   })
+  // );
 
-  return processedFilenames;
+  // return processedFilenames;
+  if (!req.files.siteplan || !Array.isArray(req.files.siteplan)) return;
+  
+    const processedFilenames = [];
+  
+    const outputDir = path.join("public", "images", "siteplan");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    await Promise.all(
+      req.files.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        // if (isSvg) {
+          // Copy SVG file
+          fs.copyFileSync(file.path, outputPath);
+          // await fs.promises.writeFile(outputPath, file.data);
+        // } else {
+        //   // Resize non-SVG file
+        //   await sharp(file.path)
+        //     .resize(650, 400)
+        //     .toFormat('jpeg')
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
+  
+        // Optional cleanup
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push(filename);
+      })
+    );
+  
+    return processedFilenames;
 };
 const masterPlanResize = async (req) => {
   
 
-  if (!req.files.masterplan || !Array.isArray(req.files.masterplan)) return;
+  // if (!req.files.masterplan || !Array.isArray(req.files.masterplan)) return;
 
-  const processedFilenames = [];
+  // const processedFilenames = [];
  
-  await Promise.all(
-    req.files.masterplan.map(async (file) => {
-      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
-      const filename =file.filename
-      const outputPath = path.join("public", "images", "masterplan", filename);
+  // await Promise.all(
+  //   req.files.masterplan.map(async (file) => {
+  //     // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+  //     const filename =file.filename
+  //     const outputPath = path.join("public", "images", "masterplan", filename);
 
-      await sharp(file.path)
-        .resize(800, 420)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
+  //     await sharp(file.path)
+  //       .resize(800, 420)
+  //       .toFormat("jpeg")
+  //       .jpeg({ quality: 90 })
+  //       .toFile(outputPath);
 
-      fs.unlinkSync(file.path); // delete original uploaded file
+  //     fs.unlinkSync(file.path); // delete original uploaded file
 
-      processedFilenames.push(filename);
-    })
-  );
+  //     processedFilenames.push(filename);
+  //   })
+  // );
 
-  return processedFilenames;
+  // return processedFilenames;
+  if (!req.files.masterplan || !Array.isArray(req.files.masterplan)) return;
+  
+    const processedFilenames = [];
+  
+    const outputDir = path.join("public", "images", "masterplan");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    await Promise.all(
+      req.files.masterplan.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        // if (isSvg) {
+          // Copy SVG file
+          fs.copyFileSync(file.path, outputPath);
+          // await fs.promises.writeFile(outputPath, file.data);
+        // } else {
+        //   // Resize non-SVG file
+        //   await sharp(file.path)
+        //     .resize(650, 400)
+        //     .toFormat('jpeg')
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
+  
+        // Optional cleanup
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push(filename);
+      })
+    );
+  
+    return processedFilenames;
 };
 const testimonialImgResize = async (req) => {
   if (!req.files || !Array.isArray(req.files)) return;
@@ -245,26 +359,92 @@ const testimonialImgResize = async (req) => {
   return processedFilenames;
 };
 
-const propertySelectedImgsResize = async (req) => {
+// const propertySelectedImgsResize = async (req) => {
 
-  if (!req.files.propertySelectedImgs || !Array.isArray(req.files.propertySelectedImgs)) return;
+//   // if (!req.files.propertySelectedImgs || !Array.isArray(req.files.propertySelectedImgs)) return;
 
-  const processedFilenames = [];
-  await Promise.all(
-    req.files.propertySelectedImgs.map(async (file) => {
+//   // const processedFilenames = [];
+//   // await Promise.all(
+//   //   req.files.propertySelectedImgs.map(async (file) => {
       
-      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
-      const filename =file.filename
-      const outputPath = path.join("public", "images", "propertyimage", filename);
+//   //     // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+//   //     const filename =file.filename
+//   //     const outputPath = path.join("public", "images", "propertyimage", filename);
 
-      await sharp(file.path)
-        .resize(750, 450)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
+//   //     await sharp(file.path)
+//   //       .resize(750, 450)
+//   //       .toFormat("jpeg")
+//   //       .jpeg({ quality: 90 })
+//   //       .toFile(outputPath);
 
-      // fs.unlinkSync(file.path); // delete original uploaded file
+//   //     // fs.unlinkSync(file.path); // delete original uploaded file
 
+//   //     processedFilenames.push("public/images/propertyimage/"+filename);
+//   //   })
+//   // );
+
+//   // return processedFilenames;
+//   console.log("req.files.propertySelectedImgs")
+//   console.log(req.files.propertySelectedImgs)
+//   if (!req.files.propertySelectedImgs || !Array.isArray(req.files.propertySelectedImgs)) return;
+  
+//     const processedFilenames = [];
+  
+//     const outputDir = path.join("public", "propertyimage", "amenity");
+//     if (!fs.existsSync(outputDir)) {
+//       fs.mkdirSync(outputDir, { recursive: true });
+//     }
+  
+//     await Promise.all(
+//       req.files.propertySelectedImgs.map(async (file) => {
+//         const ext = path.extname(file.originalname).toLowerCase();
+//         const isSvg = ext === '.svg';
+  
+//         const filename = file.filename;
+//         const outputPath = path.join(outputDir, filename);
+  
+//         // if (isSvg) {
+//           // Copy SVG file
+//           fs.copyFileSync(file.path, outputPath);
+//           // await fs.promises.writeFile(outputPath, file.data);
+//         // } else {
+//         //   // Resize non-SVG file
+//         //   await sharp(file.path)
+//         //     .resize(650, 400)
+//         //     .toFormat('jpeg')
+//         //     .jpeg({ quality: 90 })
+//         //     .toFile(outputPath);
+//         // }
+  
+//         // Optional cleanup
+//         fs.unlinkSync(file.path);
+  
+//         processedFilenames.push(filename);
+//       })
+//     );
+  
+//     return processedFilenames;
+// };
+
+
+const propertySelectedImgsResize = async (filesArray) => {
+  const processedFilenames = [];
+  const outputDir = path.join("public", "images", "propertyimage");
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  await Promise.all(
+    filesArray.map(async (file) => {
+      const ext = path.extname(file.originalname).toLowerCase();
+      const filename = file.filename;
+      const outputPath = path.join(outputDir, filename);
+
+      fs.copyFileSync(file.path, outputPath);
+      fs.unlinkSync(file.path);
+
+      // processedFilenames.push(filename);
       processedFilenames.push("public/images/propertyimage/"+filename);
     })
   );
@@ -362,32 +542,75 @@ const processFloorPlanImagesAdd = async (req) => {
   return processedFilenames;
 };
 
-const processFloorPlanImages = async (req) => {
-  const processedFilenames = [];
-  if (!req.planimage ) return [];
+// const processFloorPlanImages = async (req) => {
+//   const processedFilenames = [];
+//   if (!req.planimage ) return [];
 
   
-  var file=req.planimage
+//   var file=req.planimage
  
-      const filename = `floorplan-${Date.now()}-${file.originalname}.jpeg`;
-      const outputPath = path.join("public", "images", "propertyplan", filename);
-      await sharp(file.path)
-        .resize(750, 450)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
+//       const filename = `floorplan-${Date.now()}-${file.originalname}.jpeg`;
+//       const outputPath = path.join("public", "images", "propertyplan", filename);
+//       await sharp(file.path)
+//         .resize(750, 450)
+//         .toFormat("jpeg")
+//         .jpeg({ quality: 90 })
+//         .toFile(outputPath);
 
-      // Optional: delete original file after processing
-      fs.unlinkSync(file.path);
+//       // Optional: delete original file after processing
+//       // fs.unlinkSync(file.path);
 
-      processedFilenames.push({
-        index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
-        filename,
-        url: `public/images/propertyplan/${filename}`,
-      });
+//       processedFilenames.push({
+//         index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+//         filename,
+//         url: `public/images/propertyplan/${filename}`,
+//       });
  
+//   return processedFilenames;
+// };
+
+const processFloorPlanImages = async (req) => {
+  const processedFilenames = [];
+
+  if (!req.planimage) return [];
+
+  const file = req.planimage;
+
+  const ext = path.extname(file.originalname).toLowerCase();
+  const isSvgOrWebp = ext === '.svg' || ext === '.webp';
+
+  const filename = `floorplan-${Date.now()}-${file.originalname}`;
+  const outputDir = path.join("public", "images", "propertyplan");
+  const outputPath = path.join(outputDir, filename);
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  if (isSvgOrWebp) {
+    // just copy the file (no resizing)
+    fs.copyFileSync(file.path, outputPath);
+  } else {
+    // use sharp to convert to jpeg
+    await sharp(file.path)
+      .resize(750, 450)
+      .toFormat("jpeg")
+      .jpeg({ quality: 90 })
+      .toFile(outputPath);
+  }
+
+  // remove temp file after processing
+  fs.unlinkSync(file.path);
+
+  processedFilenames.push({
+    index: parseInt(file.fieldname.match(/\[(\d+)]/)?.[1] || 0), // fallback to 0 if no index found
+    filename,
+    url: `public/images/propertyplan/${filename}`,
+  });
+
   return processedFilenames;
 };
+
 const processFloorPlanImagesGet = async (req) => {
   const processedFilenames = [];
  
@@ -597,15 +820,15 @@ const featuredImageResizeAdd = async (req) => {
       const outputPath = path.join(outputDir, filename);
 
       try {
-        if (isSvg) {
+        // if (isSvg) {
           fs.copyFileSync(file.path, outputPath);
-        } else {
-          await sharp(file.path, { failOnError: false }) // 👈 suppress decoding failure
-            .resize(1920, 1080)
-            .toFormat("jpeg")
-            .jpeg({ quality: 90 })
-            .toFile(outputPath);
-        }
+        // } else {
+        //   await sharp(file.path, { failOnError: false }) // 👈 suppress decoding failure
+        //     .resize(1920, 1080)
+        //     .toFormat("jpeg")
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
 
         processedFilenames.push(filename);
       } catch (err) {
@@ -616,6 +839,8 @@ const featuredImageResizeAdd = async (req) => {
   );
 
   return processedFilenames;
+
+  
 };
 // const featuredImageResizeAddSite = async (req) => {
 //  console.log("featuredImageResizeAddSite")
@@ -673,15 +898,15 @@ const featuredImageResizeAddSite = async (req) => {
       const outputPath = path.join(outputDir, filename);
 
       try {
-        if (isSvg) {
+        // if (isSvg) {
           fs.copyFileSync(file.path, outputPath); // ✅ SVG copy restored
-        } else {
-          await sharp(file.path, { failOnError: false }) // ✅ added
-            .resize(1920, 1080)
-            .toFormat("jpeg")
-            .jpeg({ quality: 90 })
-            .toFile(outputPath);
-        }
+        // } else {
+        //   await sharp(file.path, { failOnError: false }) // ✅ added
+        //     .resize(1920, 1080)
+        //     .toFormat("jpeg")
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
 
         processedFilenames.push(filename);
       } catch (err) {
@@ -709,15 +934,15 @@ const featuredImageResizeAddMaster = async (req) => {
       const outputPath = path.join(outputDir, filename);
 
       try {
-        if (isSvg) {
+        // if (isSvg) {
           fs.copyFileSync(file.path, outputPath); // ✅ SVG copy restored
-        } else {
-          await sharp(file.path, { failOnError: false }) // ✅ added
-            .resize(1920, 1080)
-            .toFormat("jpeg")
-            .jpeg({ quality: 90 })
-            .toFile(outputPath);
-        }
+        // } else {
+        //   await sharp(file.path, { failOnError: false }) // ✅ added
+        //     .resize(1920, 1080)
+        //     .toFormat("jpeg")
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
 
         processedFilenames.push(filename);
       } catch (err) {
@@ -786,27 +1011,65 @@ const propertySelectedImgsResizeadd = async (req) => {
   // if (!req.files.gallerySelectedImgs || !Array.isArray(req.files.gallerySelectedImgs)) return;
 
 
-  const processedFilenames = [];
-  await Promise.all(
-    req.map(async (file) => {
+  // const processedFilenames = [];
+  // await Promise.all(
+  //   req.map(async (file) => {
       
-      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
-      const filename =file.filename
-      const outputPath = path.join("public", "images", "propertyimage", filename);
+  //     // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
+  //     const filename =file.filename
+  //     const outputPath = path.join("public", "images", "propertyimage", filename);
 
-      await sharp(file.path)
-        .resize(750, 450)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
+  //     await sharp(file.path)
+  //       .resize(750, 450)
+  //       .toFormat("jpeg")
+  //       .jpeg({ quality: 90 })
+  //       .toFile(outputPath);
 
-      fs.unlinkSync(file.path); // delete original uploaded file
+  //     fs.unlinkSync(file.path); // delete original uploaded file
 
-      processedFilenames.push("public/images/propertyimage/"+filename);
-    })
-  );
+  //     processedFilenames.push("public/images/propertyimage/"+filename);
+  //   })
+  // );
 
-  return processedFilenames;
+  // return processedFilenames;
+  if (!req.files || !Array.isArray(req.files)) return;
+  
+    const processedFilenames = [];
+  
+    const outputDir = path.join("public", "propertyimage", "amenity");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    await Promise.all(
+      req.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        // if (isSvg) {
+          // Copy SVG file
+          fs.copyFileSync(file.path, outputPath);
+          // await fs.promises.writeFile(outputPath, file.data);
+        // } else {
+        //   // Resize non-SVG file
+        //   await sharp(file.path)
+        //     .resize(650, 400)
+        //     .toFormat('jpeg')
+        //     .jpeg({ quality: 90 })
+        //     .toFile(outputPath);
+        // }
+  
+        // Optional cleanup
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push(filename);
+      })
+    );
+  
+    return processedFilenames;
 };
 const groupFilesByFieldname = (files) => {
   const fileMap = {};
