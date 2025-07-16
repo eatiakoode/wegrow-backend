@@ -1,7 +1,7 @@
 const Property = require("../models/propertyModel");
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require("../utils/validateMongodbId");
-const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd,groupFilesByFieldname,groupFilesByFieldname2,featuredImageResizeAdd,featuredImageResizeAddSite,featuredImageResizeAddMaster,propertySelectedImgsResizeadd,processUploadedPDFsadd,masterPlanResize } = require("../middlewares/uploadImage");
+const { featuredImageResize,sitePlanResize,propertySelectedImgsResize,processUploadedPDFs,processFloorPlanImagesAdd,groupFilesByFieldname,groupFilesByFieldname2,featuredImageResizeAdd,featuredImageResizeAddSite,featuredImageResizeAddMaster,propertySelectedImgsResizeadd,processUploadedPDFsadd,masterPlanResize,processFloorPlanImages } = require("../middlewares/uploadImage");
 const mongoose = require("mongoose");
 const slugify = require("slugify");
 const Propertyimage = require("../models/propertyimagesModel");
@@ -9,9 +9,10 @@ const Propertyplan = require("../models/propertyfloorModel");
 
 const createProperty = asyncHandler(async (req, res) => {
   try {
-    // console.log("pdfshow")
-    // console.log(req.files)
+    console.log("pdfshow")
+    console.log(req.files)
     if (req.files && Object.keys(req.files).length > 0) {
+      console.log("pdfshow1")
       var  propertySelectedImgs  =[]
       // if (req.files && req.files.propertySelectedImgs && req.files.propertySelectedImgs.length > 0  && Object.keys(req.files.propertySelectedImgs).length > 0 && Array.isArray(req.files.propertySelectedImgs)) {
       //   // console.log("no propertySelectedImgs")
@@ -28,17 +29,20 @@ const createProperty = asyncHandler(async (req, res) => {
 if (Array.isArray(selectedImgs) && selectedImgs.length > 0) {
   console.log("Filtered propertySelectedImgs:", selectedImgs);
   propertySelectedImgs = await propertySelectedImgsResize(selectedImgs); // pass array directly
-  if (propertySelectedImgs.length > 0) {
-    req.body.propertyimageurl = propertySelectedImgs;
-  }
+  // if (propertySelectedImgs.length > 0) {
+  //   console.log("pdfshow2")
+  //   req.body.propertyimageurl = propertySelectedImgs;
+  // }
 }
       const filesByField = groupFilesByFieldname(req.files);
       
       if (filesByField.featuredimage && filesByField.featuredimage.length > 0) {
+        console.log("pdfshow2")
         
         const processedImages = await featuredImageResizeAdd(filesByField.featuredimage);
         
         if (processedImages.length > 0) {
+          console.log("pdfshow3")
           req.body.featuredimageurl = "public/images/property/" + processedImages[0];
         }
       }
@@ -48,6 +52,7 @@ if (Array.isArray(selectedImgs) && selectedImgs.length > 0) {
         const processedImages = await featuredImageResizeAddSite(filesByField.siteplan);
         
         if (processedImages.length > 0) {
+          console.log("pdfshow4")
           req.body.siteplanurl = "public/images/siteplan/" + processedImages[0];
         }
       }
@@ -56,19 +61,22 @@ if (Array.isArray(selectedImgs) && selectedImgs.length > 0) {
         const processedImages = await featuredImageResizeAddMaster(filesByField.masterplan);
         
         if (processedImages.length > 0) {
+          console.log("pdfshow5")
           req.body.masterplanurl = "public/images/masterplan/" + processedImages[0];
         }
       }
-
+console.log("pdfshow12")
       if (filesByField.pdffile && filesByField.pdffile.length > 0) {
               // console.log("pdffile")
+              console.log("pdfshow6")
         const processedImages = await processUploadedPDFsadd(filesByField.pdffile);
         //  console.log(processedImages)
         if (processedImages.length > 0) {
+          console.log("pdfshow7")
           req.body.brochurepdf = "public/images/pdffile/" + processedImages[0];
         }
       }
-     
+     console.log("pdfshow13")
       // if (req.files && req.files.featuredimage && Array.isArray(req.files.featuredimage) && req.files.featuredimage.length > 0 ) { 
       //   console.log(req.files.featuredimage)
       //   console.log("no featuredImageResize")
@@ -129,70 +137,142 @@ if (Array.isArray(selectedImgs) && selectedImgs.length > 0) {
     //   }
     // }
 
-    const filesByFields = groupFilesByFieldname2(req.files);
-          var gallerySelectedImgsget  =[]
-          if (filesByFields.propertySelectedImgs && filesByFields.propertySelectedImgs.length > 0) {          
-              gallerySelectedImgsget  = await propertySelectedImgsResizeadd(filesByFields.propertySelectedImgs);
-              for(var i=0;i<gallerySelectedImgsget.length;i++){
-                var propertyimage={
-                  "image":gallerySelectedImgsget[i],
-                  "propertyid":newProperty._id,
-                  "title":req.body.title
-                }
-                const newLandimage = await Propertyimage.create(propertyimage);    
-              }
-          }
-    //res.json(newProperty);
-
-    const floorPlansnew = [];
-    if (req.files && Object.keys(req.files).length > 0) {
-    // Parse text fields like floorPlansget[0][title], etc.
-    Object.entries(req.body).forEach(([key, value]) => {
-      const match = key.match(/^floorPlans\[(\d+)]\[(\w+)]$/);
-      if (match) {
-        const [, index, field] = match;
-        if (!floorPlansnew[index]) floorPlansnew[index] = {};
-        floorPlansnew[index][field] = value;
-      }
-    });
-
-    // Parse uploaded files with fieldnames like floorPlansget[0][planimageget]
-    (req.files || []).forEach((file) => {
-      const match = file.fieldname.match(/^floorPlans\[(\d+)]\[planimage]$/);
-      if (match) {
-        const index = parseInt(match[1]);
-        if (!floorPlansnew[index]) floorPlansnew[index] = {};
-        floorPlansnew[index].floorPlansnew = file;
-      }
-    });
-    }
-    // Now process each floor plan
-    for (let i = 0; i < req.body.floorPlans?.length; i++) {
-      const plan = req.body.floorPlans[i];
-      const planimage = floorPlansnew[i];
-      if (plan) {
-        var plandata={
-            "title":req.body.floorPlans[i].title,
-            "bedroom":req.body.floorPlans[i].bedroom,
-            "price":req.body.floorPlans[i].price,
-            "areasize":req.body.floorPlans[i].areasize,
-            "description":req.body.floorPlans[i].description,
-            "propertyid":newProperty._id
+    // const filesByFields = groupFilesByFieldname2(req.files);
+    //       var gallerySelectedImgsget  =[]
+    //       console.log("pdfshow14")
+    //       if (filesByFields.propertySelectedImgs && filesByFields.propertySelectedImgs.length > 0) {          
+    //           gallerySelectedImgsget  = await propertySelectedImgsResizeadd(filesByFields.propertySelectedImgs);
+    //           for(var i=0;i<gallerySelectedImgsget.length;i++){
+    //             console.log("pdfshow8")
+    //             var propertyimage={
+    //               "image":gallerySelectedImgsget[i],
+    //               "propertyid":newProperty._id,
+    //               "title":req.body.title
+    //             }
+    //             const newLandimage = await Propertyimage.create(propertyimage);    
+    //           }
+    //       }
+    console.log("pdfshow14")
+    if (propertySelectedImgs?.length > 0) {
+      // ✅ Append logo filename to req.body
+      // console.log("Property Images:", propertySelectedImgs);
+      // req.body.propertyimageurl = propertySelectedImgs;
+      for(var i=0;i<propertySelectedImgs?.length;i++){
+        var propertyimage={
+          "image":propertySelectedImgs[i],
+          "propertyid":newProperty._id,
+          "title":req.body.title
         }
+        const newProperty1 = await Propertyimage.create(propertyimage);
+
+      }
+    }
+    //res.json(newProperty);
+    console.log("pdfshow15")
+
+    // const floorPlansnew = [];
+    // if (req.files && Object.keys(req.files).length > 0) {
+    //   console.log("pdfshow9")
+    // // Parse text fields like floorPlansget[0][title], etc.
+    // Object.entries(req.body).forEach(([key, value]) => {
+    //   const match = key.match(/^floorPlans\[(\d+)]\[(\w+)]$/);
+    //   if (match) {
+    //     const [, index, field] = match;
+    //     if (!floorPlansnew[index]) floorPlansnew[index] = {};
+    //     floorPlansnew[index][field] = value;
+    //   }
+    // });
+
+    // // Parse uploaded files with fieldnames like floorPlansget[0][planimageget]
+    // (req.files || []).forEach((file) => {
+    //   const match = file.fieldname.match(/^floorPlans\[(\d+)]\[planimage]$/);
+    //   if (match) {
+    //     const index = parseInt(match[1]);
+    //     if (!floorPlansnew[index]) floorPlansnew[index] = {};
+    //     floorPlansnew[index].floorPlansnew = file;
+    //   }
+    // });
+    // }
+    // // Now process each floor plan
+    // for (let i = 0; i < req.body.floorPlans?.length; i++) {
+    //   console.log("pdfshow10")
+    //   const plan = req.body.floorPlans[i];
+    //   const planimage = floorPlansnew[i];
+    //   if (plan) {
+    //     var plandata={
+    //         "title":req.body.floorPlans[i].title,
+    //         "bedroom":req.body.floorPlans[i].bedroom,
+    //         "price":req.body.floorPlans[i].price,
+    //         "areasize":req.body.floorPlans[i].areasize,
+    //         "description":req.body.floorPlans[i].description,
+    //         "propertyid":newProperty._id
+    //     }
 
       
-    if(planimage){
-        const processedImages = await processFloorPlanImagesAdd(planimage); // assumes it returns [{url: "..."}]
-        if (processedImages?.length > 0) {
-          plandata.planimageurl = processedImages[0].url;
+    // if(planimage){
+    //     const processedImages = await processFloorPlanImagesAdd(planimage); // assumes it returns [{url: "..."}]
+    //     if (processedImages?.length > 0) {
+    //       console.log("pdfshow11")
+    //       plandata.planimageurl = processedImages[0].url;
+    //     }
+    //   } 
+    //   console.log("plandata")
+    //   console.log(plandata)
+    //   const newPropertyplan = await Propertyplan.create(plandata);       
+    //   // const newPropertyplan = await Landingplan.create(plandata);        
+    //   }
+    // }
+
+    for(var i=0;i<req.body.floorPlans?.length;i++){
+          
+            var plandata={
+                "title":req.body.floorPlans[i].title,
+                "bedroom":req.body.floorPlans[i].bedroom,
+                "price":req.body.floorPlans[i].price,
+                "areasize":req.body.floorPlans[i].areasize,
+                "description":req.body.floorPlans[i].description,
+                "propertyid":newProperty._id
+            }
+            const floorPlans = [];
+    
+        // Parse text fields like floorPlans[0][title], etc.
+        Object.entries(req.body).forEach(([key, value]) => {
+          const match = key.match(/^floorPlans\[(\d+)]\[(\w+)]$/);
+          if (match) {
+            const [ , index, field ] = match;
+            if (!floorPlans[index]) floorPlans[index] = {};
+            floorPlans[index][field] = value;
+          }
+        });
+    
+        // Parse uploaded files with fieldnames like floorPlans[0][planimage]
+        (req.files || []).forEach((file) => {
+          const match = file.fieldname.match(/^floorPlans\[(\d+)]\[planimage]$/);
+          if (match) {
+            const index = parseInt(match[1]);
+            if (!floorPlans[index]) floorPlans[index] = {};
+            floorPlans[index].planimage = file;
+          }
+        });
+        console.log("floorPlans floorPlans")
+        console.log(floorPlans)
+        // Now process each floor plan image
+        for (let i = 0; i < floorPlans.length; i++) {
+          const plan = floorPlans[i];
+    
+          if (plan) {
+            console.log("Resizing image for floorPlan", i);
+    
+            const processedImages = await processFloorPlanImages(plan); // assuming this accepts a single file
+            if (processedImages.length > 0) {
+                plandata.planimageurl = `${processedImages[0].url}`;
+            }
+          }
         }
-      } 
-      console.log("plandata")
-      console.log(plandata)
-      const newPropertyplan = await Propertyplan.create(plandata);       
-      // const newPropertyplan = await Landingplan.create(plandata);        
-      }
-    }
+            console.log("plandata plandata")
+            console.log(plandata)
+            const newPropertyplan = await Propertyplan.create(plandata);
+          }
     const message={
       "status":"success",
       "message":"Data Add sucessfully",

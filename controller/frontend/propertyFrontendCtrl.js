@@ -31,10 +31,10 @@ const getallPropertyList = asyncHandler(async (req, res) => {
     query["status"] =true;
     query["admin_approve"] =true;
     
-    if(req.query.featured=="yes"){
+    if(req.query.featured){
       query["featuredproperty"] = req.query.featured;      
     }
-    if(req.query.hot=="yes"){
+    if(req.query.hot){
       query["hotproperty"] = req.query.hot;      
     }
     let limit=100;
@@ -72,10 +72,10 @@ const getallPropertyFilterList = asyncHandler(async (req, res) => {
     // let query ={"status":true}
     query["status"] =true;
     query["admin_approve"] =true;
-    if(req.query.featured=="yes"){
+    if(req.query.featured){
       query["featuredproperty"] = req.query.featured;      
     }
-    if(req.query.hot=="yes"){
+    if(req.query.hot){
       query["hotproperty"] = req.query.hot;      
     }
     if(req.query.category){

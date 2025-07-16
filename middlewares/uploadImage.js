@@ -573,37 +573,78 @@ const locationImgResize = async (req) => {
   return processedFilenames;
 };
 const processFloorPlanImagesAdd = async (req) => {
-  const processedFilenames = [];
+  // const processedFilenames = [];
 
-  if (!req.floorPlansnew) return [];
+  // if (!req.floorPlansnew) return [];
 
-  const file = req.floorPlansnew;
+  // const file = req.floorPlansnew;
 
-  // Remove original extension before adding .jpeg
-  const originalNameWithoutExt = path.basename(file.originalname, path.extname(file.originalname));
-  const filename = `floorplan-${Date.now()}-${originalNameWithoutExt}.jpeg`;
-  const outputPath = path.join("public", "images", "propertyplan", filename);
+  // // Remove original extension before adding .jpeg
+  // const originalNameWithoutExt = path.basename(file.originalname, path.extname(file.originalname));
+  // const filename = `floorplan-${Date.now()}-${originalNameWithoutExt}.jpeg`;
+  // const outputPath = path.join("public", "images", "propertyplan", filename);
 
-  try {
-    await sharp(file.path)
-      .resize(750, 450)
-      .toFormat("jpeg")
-      .jpeg({ quality: 90 })
-      .toFile(outputPath);
+  // try {
+  //   await sharp(file.path)
+  //     .resize(750, 450)
+  //     .toFormat("jpeg")
+  //     .jpeg({ quality: 90 })
+  //     .toFile(outputPath);
 
-    fs.unlinkSync(file.path); // clean up original
+  //   fs.unlinkSync(file.path); // clean up original
 
+  //   processedFilenames.push({
+  //     index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]),
+  //     filename,
+  //     url: `public/images/propertyplan/${filename}`,
+  //   });
+  // } catch (err) {
+  //   console.error("Error processing floor plan image:", err.message);
+  //   fs.unlinkSync(file.path);
+  // }
+
+  // return processedFilenames;
+   const processedFilenames = [];
+  
+    if (!req.planimage) return [];
+  
+    const file = req.planimage;
+    console.log("test")
+    console.log(file)
+  
+    const ext = path.extname(file.originalname).toLowerCase();
+    const isSvgOrWebp = ext === '.svg' || ext === '.webp';
+  
+    const filename = `floorplan-${Date.now()}-${file.originalname}`;
+    const outputDir = path.join("public", "images", "propertyplan");
+    const outputPath = path.join(outputDir, filename);
+  
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    if (isSvgOrWebp) {
+      // just copy the file (no resizing)
+      fs.copyFileSync(file.path, outputPath);
+    } else {
+      // use sharp to convert to jpeg
+      await sharp(file.path)
+        .resize(750, 450)
+        .toFormat("jpeg")
+        .jpeg({ quality: 90 })
+        .toFile(outputPath);
+    }
+  
+    // remove temp file after processing
+    fs.unlinkSync(file.path);
+  
     processedFilenames.push({
-      index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]),
+      index: parseInt(file.fieldname.match(/\[(\d+)]/)?.[1] || 0), // fallback to 0 if no index found
       filename,
       url: `public/images/propertyplan/${filename}`,
     });
-  } catch (err) {
-    console.error("Error processing floor plan image:", err.message);
-    fs.unlinkSync(file.path);
-  }
-
-  return processedFilenames;
+  
+    return processedFilenames;
 };
 
 // const processFloorPlanImages = async (req) => {
@@ -664,7 +705,7 @@ const processFloorPlanImages = async (req) => {
   }
 
   // remove temp file after processing
-  fs.unlinkSync(file.path);
+  // fs.unlinkSync(file.path);
 
   processedFilenames.push({
     index: parseInt(file.fieldname.match(/\[(\d+)]/)?.[1] || 0), // fallback to 0 if no index found
@@ -676,28 +717,67 @@ const processFloorPlanImages = async (req) => {
 };
 
 const processFloorPlanImagesGet = async (req) => {
-  const processedFilenames = [];
+  // const processedFilenames = [];
  
-  if (!req.planimageget ) return [];
+  // if (!req.planimageget ) return [];
 
-  var file=req.planimageget
-      const filename = `floorplan-${Date.now()}-${file.originalname}.jpeg`;
-      const outputPath = path.join("public", "images", "propertyplan", filename);
-      await sharp(file.path)
-        .resize(750, 450)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
+  // var file=req.planimageget
+  //     const filename = `floorplan-${Date.now()}-${file.originalname}.jpeg`;
+  //     const outputPath = path.join("public", "images", "propertyplan", filename);
+  //     await sharp(file.path)
+  //       .resize(750, 450)
+  //       .toFormat("jpeg")
+  //       .jpeg({ quality: 90 })
+  //       .toFile(outputPath);
 
-      // Optional: delete original file after processing
-      fs.unlinkSync(file.path);
+  //     // Optional: delete original file after processing
+  //     fs.unlinkSync(file.path);
 
-      processedFilenames.push({
-        index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
-        filename,
-        url: `public/images/propertyplan/${filename}`,
-      });
+  //     processedFilenames.push({
+  //       index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+  //       filename,
+  //       url: `public/images/propertyplan/${filename}`,
+  //     });
   
+  // return processedFilenames;
+   const processedFilenames = [];
+
+  if (!req.planimageget) return [];
+
+  const file = req.planimageget;
+
+  const ext = path.extname(file.originalname).toLowerCase();
+  const isSvgOrWebp = ext === '.svg' || ext === '.webp';
+
+  const filename = `floorplan-${Date.now()}-${file.originalname}`;
+  const outputDir = path.join("public", "images", "propertyplan");
+  const outputPath = path.join(outputDir, filename);
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  if (isSvgOrWebp) {
+    // just copy the file (no resizing)
+    fs.copyFileSync(file.path, outputPath);
+  } else {
+    // use sharp to convert to jpeg
+    await sharp(file.path)
+      .resize(750, 450)
+      .toFormat("jpeg")
+      .jpeg({ quality: 90 })
+      .toFile(outputPath);
+  }
+
+  // remove temp file after processing
+  // fs.unlinkSync(file.path);
+
+  processedFilenames.push({
+    index: parseInt(file.fieldname.match(/\[(\d+)]/)?.[1] || 0), // fallback to 0 if no index found
+    filename,
+    url: `public/images/propertyplan/${filename}`,
+  });
+
   return processedFilenames;
 };
 const processLandingPlanGet = async (req) => {

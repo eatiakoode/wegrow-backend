@@ -250,12 +250,14 @@ var propertySchema = new mongoose.Schema(
     },
     foodcourt:{
       type: Boolean,
+      default: false
       // required: true,
       // unique: true,
       // index: true,
     },
     multiplex:{
       type: Boolean,
+      default: false
       // required: true,
       // unique: true,
       // index: true,
