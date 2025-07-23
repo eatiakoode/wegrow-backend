@@ -163,6 +163,11 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 console.log("testimage")
 app.use(notFound);
 app.use(errorHandler);
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is running  at PORT ${PORT}`);

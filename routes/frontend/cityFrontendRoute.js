@@ -21,5 +21,4 @@ router.get("/byidglimpse/:id", getByidGlimpse);
 
 
 
-
 module.exports = router;
