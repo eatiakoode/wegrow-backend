@@ -8,12 +8,24 @@ const enqueryPropertyMail =  async (req, res) => {
 
   try {
     // 1. Create transporter
+    // const transporter = nodemailer.createTransport({
+    //   service: 'gmail', // or use host, port for custom SMTP
+    //   auth: {
+    //     user: 'devakoode@gmail.com',
+    //     pass: 'dqixhlddcbwsbgjx',
+    //   },
+    // });
+
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or use host, port for custom SMTP
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,            // use SSL
       auth: {
         user: 'devakoode@gmail.com',
         pass: 'dqixhlddcbwsbgjx',
       },
+      logger: true,            // log to console
+      debug: true,             // include SMTP traffic in logs
     });
 
     // 2. Setup email data
