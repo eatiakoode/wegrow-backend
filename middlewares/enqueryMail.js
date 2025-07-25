@@ -33,6 +33,7 @@ const enqueryPropertyMail =  async (req, res) => {
 
     // 3. Send email
     await transporter.sendMail(mailOptions);
+    console.log('Enquiry sent successfully!' )
 
     res.status(200).json({ success: true, message: 'Enquiry sent successfully!' });
   } catch (error) {
@@ -42,8 +43,10 @@ const enqueryPropertyMail =  async (req, res) => {
  
 };
 const enqueryContactMail =  async (req, res) => {
+  console.log("mail triger")
+  
   const { name, email,phone, message,date } = req.body;
-
+console.log(name, email,phone, message,date )
   try {
     // 1. Create transporter
     const transporter = nodemailer.createTransport({
