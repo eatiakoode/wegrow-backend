@@ -42,25 +42,27 @@ const enqueryPropertyMail =  async (req, res) => {
   }
  
 };
-const enqueryContactMail =  async (req, res) => {
-  console.log("mail triger")
-  
-  const { name, email,phone, message,date } = req.body;
-console.log(name, email,phone, message,date )
+
+const enqueryContactMail = async (req, res) => {
+  console.log("📧 Enquiry mail triggered");
+
+  const { name, email, phone, message, date } = req.body;
+  console.log("Received Enquiry:", { name, email, phone, message, date });
+
   try {
-    // 1. Create transporter
+    // 1. Setup transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or use host, port for custom SMTP
+      service: 'gmail',
       auth: {
         user: 'devakoode@gmail.com',
         pass: 'dqixhlddcbwsbgjx',
       },
     });
 
-    // 2. Setup email data
+    // 2. Prepare email content
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'eati@akoode.in', // Your business or support email
+      to: 'eati@akoode.in',
       subject: 'New Enquiry Form Submission',
       html: `
         <h3>New Enquiry</h3>
@@ -75,13 +77,13 @@ console.log(name, email,phone, message,date )
 
     // 3. Send email
     await transporter.sendMail(mailOptions);
+    return res.status(200).json({ success: true, message: 'Enquiry sent successfully!' });
 
-    res.status(200).json({ success: true, message: 'Enquiry sent successfully!' });
   } catch (error) {
-    console.error('Error sending enquiry email:', error);
-    res.status(500).json({ success: false, message: 'Failed to send enquiry.' });
+    console.error("❌ Error sending email:", error);
+    return res.status(500).json({ success: false, message: 'Failed to send enquiry. Please try again later.' });
   }
- 
 };
+
 
 module.exports = { enqueryPropertyMail,enqueryContactMail};
